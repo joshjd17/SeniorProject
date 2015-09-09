@@ -1,0 +1,25 @@
+Specifications
+
+Project Title: 
+
+Summary: Buying textbooks from the bookstore can be outrageously priced. This website will allow Rowan students to buy, sell, and trade their used textbooks to other students. This will provide an affordable alternative to the bookstore or purchasing through online sources. This site should also create a sense of community between Rowan students as they will be interacting and helping each other by the exchange of books. 
+
+Goals:
+ -    Students will create their own marketplace for textbooks.
+ -    Textbooks will become more affordable for students.
+
+Features: 
+  Users will log in to their own account
+  Users will be able to search for books by title, author, or ISBN
+  Users will be able to browse for books by department and/or class
+  Users will use their private emails to communicate with a seller
+  User accounts will provide the following features:
+      Access to their own posts
+      Ability to edit their posts
+      Remove their own posts
+Limitations:
+      Site will not provide infrastructure for online transactions
+      Site will not provide any sort of shipping, all exchanges are up to the users
+      Site will not facilitate any direct communication(Future consideration)
+      No database of books or classes
+      Info about users is limited(Future consideration)
