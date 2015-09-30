@@ -14,7 +14,7 @@ DEVELOPER COMPONENTS
       NodeJS
    HTML // Front End
    Bootstrap // Format/Style
-   CSS // Formate/Style
+   CSS // Format/Style
 
 DEV TOOLS
    IDE
@@ -25,7 +25,9 @@ DEV TOOLS
 FUNCTIONAL COMPONENTS
    login.html // Login Page
    main.html // Main Page
-   ExpressJS files // Routing of pages
+   ExpressJS files // Routing of pages, Possible "One Page App" configuration
+   Database (MongoDB) Configuration
+   Host Server
    ...
 
 
@@ -33,5 +35,9 @@ FUNCTIONAL COMPONENTS
 REFERENCES:
    Chirp Tutorial:
       // Handles posts, login/authentication, database configuration
-      https://github.com/microsoftlearning/chirp
-      https://www.youtube.com/watch?v=Jh0er2pRcq8
+        https://github.com/microsoftlearning/chirp
+        https://www.youtube.com/watch?v=Jh0er2pRcq8
+   NorthwindNode Tutorial:
+      // Handles posts, categories, login/authentication, database configuration, search
+      // Similar structure to design
+        http://www.bradoncode.com/tutorials/learn-mean-stack-tutorial/
