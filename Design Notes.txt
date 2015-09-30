@@ -1,0 +1,36 @@
+---------------------
+Design Document Notes
+---------------------
+
+Prototype UI:
+https://github.com/joshjd17/SeniorProject/tree/master/Template%20Images
+
+DEVELOPER COMPONENTS
+
+   MEAN Stack
+      MongoDB // Database configuration
+      ExpressJS // Routing of pages
+      AngularJS // Front End
+      NodeJS
+   HTML // Front End
+   Bootstrap // Format/Style
+   CSS // Formate/Style
+
+DEV TOOLS
+   IDE
+      Webstorm
+   TESTING
+      Advanced Rest Client (Google Chrome App) // HTTP Req
+
+FUNCTIONAL COMPONENTS
+   login.html // Login Page
+   main.html // Main Page
+   ExpressJS files // Routing of pages
+
+
+
+REFERENCES:
+   Chirp Tutorial:
+      // Handles posts, login/authentication, database configuration
+      https://github.com/microsoftlearning/chirp
+      https://www.youtube.com/watch?v=Jh0er2pRcq8
