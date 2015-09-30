@@ -20,12 +20,13 @@ DEV TOOLS
    IDE
       Webstorm
    TESTING
-      Advanced Rest Client (Google Chrome App) // HTTP Req
+      Advanced Rest Client (Google Chrome App) // HTTP Request tests to server
 
 FUNCTIONAL COMPONENTS
    login.html // Login Page
    main.html // Main Page
    ExpressJS files // Routing of pages
+   ...
 
 
 
