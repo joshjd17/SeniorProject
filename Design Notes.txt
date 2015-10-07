@@ -29,6 +29,7 @@ FUNCTIONAL COMPONENTS
    Database (MongoDB) Configuration
    Host Server
    Authentication with passport
+   Notification system
    ...
 
 
