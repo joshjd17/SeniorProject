@@ -28,6 +28,7 @@ FUNCTIONAL COMPONENTS
    ExpressJS files // Routing of pages, Possible "One Page App" configuration
    Database (MongoDB) Configuration
    Host Server
+   Authentication with passport
    ...
 
 
