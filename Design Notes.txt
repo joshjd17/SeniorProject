@@ -31,6 +31,17 @@ FUNCTIONAL COMPONENTS
    Authentication with passport
    Notification system
    ...
+   
+DATABASE
+   MongoDB(NoSQL)
+      Will utilize 2 schemas:
+      book(Title,Author,ISBN,Department, Class)
+      Post(email, type, book, date)
+   - Schemas will be implemented using Mongoose(http://mongoosejs.com/docs/guide.html)
+   
+   
+      
+         
 
 
 
@@ -43,3 +54,6 @@ REFERENCES:
       // Handles posts, categories, login/authentication, database configuration, search
       // Similar structure to design
         http://www.bradoncode.com/tutorials/learn-mean-stack-tutorial/
+   Michael Moser, MEAN Stack Intro:Build An End to End Application:
+      //Breakdown of MEAN stack functionality and components
+      https://www.youtube.com/watch?v=AEE7DY2AYvI
