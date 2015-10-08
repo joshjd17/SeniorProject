@@ -1,0 +1,59 @@
+---------------------
+Design Document Notes
+---------------------
+
+Prototype UI:
+https://github.com/joshjd17/SeniorProject/tree/master/Template%20Images
+
+DEVELOPER COMPONENTS
+
+   MEAN Stack
+      MongoDB // Database configuration
+      ExpressJS // Routing of pages
+      AngularJS // Front End
+      NodeJS
+   HTML // Front End
+   Bootstrap // Format/Style
+   CSS // Format/Style
+
+DEV TOOLS
+   IDE
+      Webstorm
+   TESTING
+      Advanced Rest Client (Google Chrome App) // HTTP Request tests to server
+
+FUNCTIONAL COMPONENTS
+   login.html // Login Page
+   main.html // Main Page
+   ExpressJS files // Routing of pages, Possible "One Page App" configuration
+   Database (MongoDB) Configuration
+   Host Server
+   Authentication with passport
+   Notification system
+   ...
+   
+DATABASE
+   MongoDB(NoSQL)
+      Will utilize 2 schemas:
+      book(Title,Author,ISBN,Department, Class)
+      Post(email, type, book, date)
+   - Schemas will be implemented using Mongoose(http://mongoosejs.com/docs/guide.html)
+   
+   
+      
+         
+
+
+
+REFERENCES:
+   Chirp Tutorial:
+      // Handles posts, login/authentication, database configuration
+        https://github.com/microsoftlearning/chirp
+        https://www.youtube.com/watch?v=Jh0er2pRcq8
+   NorthwindNode Tutorial:
+      // Handles posts, categories, login/authentication, database configuration, search
+      // Similar structure to design
+        http://www.bradoncode.com/tutorials/learn-mean-stack-tutorial/
+   Michael Moser, MEAN Stack Intro:Build An End to End Application:
+      //Breakdown of MEAN stack functionality and components
+      https://www.youtube.com/watch?v=AEE7DY2AYvI
