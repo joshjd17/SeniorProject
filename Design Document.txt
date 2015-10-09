@@ -231,6 +231,7 @@ PROTOTYPE:
       = Allows for the user to post text into the website, similar to a forum
       = The user's username and password are stored into the database under 'users'
       = All of the posts are stored into the database under 'posts'
+      = TODO: Implement more navigation and more advanced schemas
    - https://github.com/joshjd17/SeniorProject/tree/prototype-bb/PrototypeBB
    
 ----------------------------------------------------------------------------------------------------------------------
