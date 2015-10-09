@@ -2,9 +2,6 @@
 Design Document v.1.0
 ---------------------
 
-Prototype UI:
-https://github.com/joshjd17/SeniorProject/tree/master/Template%20Images
-
 DEVELOPER COMPONENTS
 
    MEAN Stack
@@ -44,7 +41,7 @@ FUNCTIONAL COMPONENTS
          = Contains the Recent Feed
          = The default webpage
       - login.html
-         = ONLY IF AUTHENTICATION IS IMPLEMENTED
+         = ***ONLY IF AUTHENTICATION IS IMPLEMENTED
          = The page that the user will use to login
          = The default webpage if authentication is implemented
    ExpressJS Files 
@@ -59,6 +56,7 @@ FUNCTIONAL COMPONENTS
    
    
 DATABASE
+
    MongoDB (NoSQL)
       - Will utilize 2 Schemas:
          = Book (Title, Author, ISBN, Department, Class)
@@ -67,6 +65,7 @@ DATABASE
    
    
 SERVER PLATFORM
+
    Node.js
       - Server scripts will be used for the following:
          = Using RESTful APIs 
@@ -76,8 +75,72 @@ SERVER PLATFORM
             
             
 CONSIDERATIONS
+
    - User Accounts/Authorization/Authentication
    - SMS Service for notifications
+   
+   
+DRAFT UI:
+
+   Source
+      - https://github.com/joshjd17/SeniorProject/tree/master/Template%20Images
+   Flow Diagram
+      - https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Flow%20Diagram.png
+      
+   Index.html (Default Page)
+      - The default web page that initializes the persistent components of the website
+      - IF AUTHENTATION IS IMPLEMENTED: viewed after login.html
+      - https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Main%20-%20Recent%20Feed.png
+   Login.html
+      - ***ONLY IF AUTHENTICATION IS IMPLEMENTED
+      - Used for 'username' and 'password' authentication
+      - https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Login.png
+   Browse Partial
+      - Default Page
+         = Viewed when the 'Browse' button is clicked on
+         = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Browse%20-%20Intro.png
+      - Browsing Page
+         = When valid input for 'department' and 'class' fields are given
+         = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Browse%20-%20Main.png
+      - Browsing Sell Post
+         = Viewed when a specified 'Sell' post is clicked on
+         = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Browse%20-%20View%20Sell%20Post.png
+      - Browsing Trade Post
+         = Viewed when a specified 'Trade' post is clicked on
+         = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Browse%20-%20View%20Trade%20Post.png
+   Post Partial
+      - A javascript popup that is viewable when the user clicks on the 'Post' button (viewed on top of the current page)
+      - Sell Post
+         = Default page, viewed when the user clicks on the 'Post' button
+         = Viewed when the user changes the field 'Trade' to 'Sell'
+         = Fields/Required User Inputs
+            ~ Type: Sell
+            ~ Price: Amount the user wants to sell the book for
+            ~ Department: Name of the department the book to be sold is in
+            ~ Class: Name of the class the book to be sold is in
+            ~ Title: Name of the book the user wants to sell
+            ~ Author: Name of the author for the book the user wants to sell
+            ~ ISBN: ISBN for the book the user wants to sell
+            ~ Condition: The condition of the book the user wants to sell
+         = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Sell.png
+         = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Sell%20Scrolled.png
+      - Trade Post
+         = Viewed when the user changes the field 'Sell' to 'Trade'
+         = Fields/Required User Inputs
+            ~ Type: Trade
+            ~ Trade_Title: Name of the book the user wants
+            ~ Department: Name of the department the book to be traded is in
+            ~ Class: Name of the class the book to be traded is in
+            ~ Title: Name of the book the user wants to trade
+            ~ Author: Name of the author for the book the user wants to trade
+            ~ ISBN: ISBN for the book the user wants to trade
+            ~ Condition: The condition of the book the user wants to trade
+         = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Trade.png
+         = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Trade%20Scrolled.png
+
+
+PROTOTYPE:
+   - https://github.com/joshjd17/SeniorProject/tree/prototype-bb/PrototypeBB
    
    
 
