@@ -8,62 +8,91 @@ https://github.com/joshjd17/SeniorProject/tree/master/Template%20Images
 DEVELOPER COMPONENTS
 
    MEAN Stack
-      MongoDB // Database configuration
-      ExpressJS // Routing of pages
-      AngularJS // Front End
+      MongoDB 
+         - Database configuration
+      ExpressJS
+         - Routing of backend/database components
+      AngularJS
+         - Front end javascript code
       NodeJS
-   HTML // Front End
-   Bootstrap // Format/Style
-   CSS // Format/Style
+         - For NPM components
+   HTML
+      - Code used for front end pages
+   Bootstrap
+      - Format/Style for front end design
+   CSS
+      - Format/Style for front end design
 
-DEV TOOLS
+
+DEVELOPMENT TOOLS
+
    IDE
-      Webstorm
+      - Webstorm
+      
    TESTING
-      Advanced Rest Client (Google Chrome App) // HTTP Request tests to server
+      - Advanced Rest Client (Google Chrome App) 
+         = Used for HTTP Request tests to server/database
+
 
 FUNCTIONAL COMPONENTS
-   main.html // Main Page
-   ExpressJS files // Routing of pages, Possible "One Page App" configuration
-   Database (MongoDB) Configuration
-   Host Server
-   Notification system
-   ...
+
+   HTML Files
+      - index.html
+         = The main page the user will access
+         = Gets the specified partials of the other pages for the website (persistent webpage)
+      - main.html
+         = Contains the Recent Feed
+         = The default webpage
+      - login.html
+         = ONLY IF AUTHENTICATION IS IMPLEMENTED
+         = The page that the user will use to login
+         = The default webpage if authentication is implemented
+   ExpressJS Files 
+      - Routing of backend
+   Database
+      - Detailed information below in DATABASE section
+   Host Server 
+      - DigitalOcean or Rowan University (Possibly)
+   Important Code
+      - Notification System
+         = Sends an e-mail to the specified user to notify them of a possible trade/sell from another user
+   
    
 DATABASE
-   MongoDB(NoSQL)
-      Will utilize 2 schemas:
-      Book(Title,Author,ISBN,Department, Class)
-      Post(email, type, book, date)
-   - Schemas will be implemented using Mongoose(http://mongoosejs.com/docs/guide.html)
+   MongoDB (NoSQL)
+      - Will utilize 2 Schemas:
+         = Book (Title, Author, ISBN, Department, Class)
+         = Post (E-mail, Type, Book, Date)
+      - Schemas will be implemented using Mongoose (http://mongoosejs.com/docs/guide.html)
+   
    
 SERVER PLATFORM
    Node.js
-   -Server scripts will be used for the following:
-         - Using RESTful APIs 
-         - Observing for complementary trade posts
-         - Using email to notify posters of interested persons
-            - Links provided in emails will update/delete posts 
+      - Server scripts will be used for the following:
+         = Using RESTful APIs 
+         = Observing for complementary trade posts
+         = Using email to notify posters of interested persons
+            ~ Links provided in emails will update/delete posts 
+            
             
 CONSIDERATIONS
-   - User Accounts/Authorization
+   - User Accounts/Authorization/Authentication
    - SMS Service for notifications
    
    
-      
-         
-
-
 
 REFERENCES:
+
    Chirp Tutorial:
       // Handles posts, login/authentication, database configuration
-        https://github.com/microsoftlearning/chirp
-        https://www.youtube.com/watch?v=Jh0er2pRcq8
+      https://github.com/microsoftlearning/chirp
+      https://www.youtube.com/watch?v=Jh0er2pRcq8
+        
    NorthwindNode Tutorial:
       // Handles posts, categories, login/authentication, database configuration, search
       // Similar structure to design
-        http://www.bradoncode.com/tutorials/learn-mean-stack-tutorial/
+      http://www.bradoncode.com/tutorials/learn-mean-stack-tutorial/
+        
    Michael Moser, MEAN Stack Intro:Build An End to End Application:
       //Breakdown of MEAN stack functionality and components
       https://www.youtube.com/watch?v=AEE7DY2AYvI
