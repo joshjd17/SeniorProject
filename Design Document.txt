@@ -1,5 +1,5 @@
 ---------------------
-Design Document Notes
+Design Document v.1.0
 ---------------------
 
 Prototype UI:
@@ -33,7 +33,7 @@ FUNCTIONAL COMPONENTS
 DATABASE
    MongoDB(NoSQL)
       Will utilize 2 schemas:
-      book(Title,Author,ISBN,Department, Class)
+      Book(Title,Author,ISBN,Department, Class)
       Post(email, type, book, date)
    - Schemas will be implemented using Mongoose(http://mongoosejs.com/docs/guide.html)
    
