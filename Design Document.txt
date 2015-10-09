@@ -109,15 +109,32 @@ DRAFT UI:
    Browse Partial
       - Default Page
          = Viewed when the 'Browse' button is clicked on
+         = Fields/Required User Inputs
+            ~ Department: The department in which the user wants to search through
+            ~ Class: The class in which the user wants to search through
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Browse%20-%20Intro.png
       - Browsing Page
          = When valid input for 'department' and 'class' fields are given
+         = Lists the 'Trade' and 'Sell' posts that match the provided 'department' and 'class' fields
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Browse%20-%20Main.png
       - Browsing Sell Post
          = Viewed when a specified 'Sell' post is clicked on
+         = Display
+            ~ Type: Selling
+            ~ Title: Name of the book being sold
+            ~ Author: Name of the author of the book being sold
+            ~ ISBN: ISBN of the book being sold
+            ~ Condition: Condition of the book being sold (New, Good, Fair, etc.)
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Browse%20-%20View%20Sell%20Post.png
       - Browsing Trade Post
          = Viewed when a specified 'Trade' post is clicked on
+         = Display
+            ~ Type: Trading
+            ~ Title: Name of the book being traded
+            ~ Author: Name of the author of the book being traded
+            ~ ISBN: ISBN of the book being traded
+            ~ Condition: Condition of the book being sold (New, Good, Fair, etc.)
+            ~ Trading_For_Title: The title of the book the user wishes to trade their book for
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Browse%20-%20View%20Trade%20Post.png
          
    Post Partial
@@ -133,7 +150,7 @@ DRAFT UI:
             ~ Title: Name of the book the user wants to sell
             ~ Author: Name of the author for the book the user wants to sell
             ~ ISBN: ISBN for the book the user wants to sell
-            ~ Condition: The condition of the book the user wants to sell
+            ~ Condition: The condition of the book the user wants to sell (New, Good, Fair, etc.)
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Sell.png
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Sell%20Scrolled.png
       - Trade Post
@@ -146,7 +163,7 @@ DRAFT UI:
             ~ Title: Name of the book the user wants to trade
             ~ Author: Name of the author for the book the user wants to trade
             ~ ISBN: ISBN for the book the user wants to trade
-            ~ Condition: The condition of the book the user wants to trade
+            ~ Condition: The condition of the book the user wants to trade (New, Good, Fair, etc.)
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Trade.png
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Trade%20Scrolled.png
 
