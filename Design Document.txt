@@ -80,7 +80,13 @@ SERVER PLATFORM
             ~ Links provided in emails will update/delete posts 
 
 ----------------------------------------------------------------------------------------------------------------------
+ROUTES(In Progress)
 
+      GET      '/'                         returns main.html
+      GET      '/api/posts/dept            returns postsController.listDept
+      GET      '/api/posts/dept/class      returns postsController.listClass
+      POST     '/api/post/sale/'           returns postsController.createSale
+      POST     '/api/post/trade/'          returns postsController.createTrade
 CONSIDERATIONS
 
    - User Accounts/Authorization/Authentication
