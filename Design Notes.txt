@@ -23,12 +23,10 @@ DEV TOOLS
       Advanced Rest Client (Google Chrome App) // HTTP Request tests to server
 
 FUNCTIONAL COMPONENTS
-   login.html // Login Page
    main.html // Main Page
    ExpressJS files // Routing of pages, Possible "One Page App" configuration
    Database (MongoDB) Configuration
    Host Server
-   Authentication with passport
    Notification system
    ...
    
@@ -38,6 +36,18 @@ DATABASE
       book(Title,Author,ISBN,Department, Class)
       Post(email, type, book, date)
    - Schemas will be implemented using Mongoose(http://mongoosejs.com/docs/guide.html)
+   
+SERVER PLATFORM
+   Node.js
+   -Server scripts will be used for the following:
+         - Using RESTful APIs 
+         - Observing for complementary trade posts
+         - Using email to notify posters of interested persons
+            - Links provided in emails will update/delete posts 
+            
+CONSIDERATIONS
+   - User Accounts/Authorization
+   - SMS Service for notifications
    
    
       
