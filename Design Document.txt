@@ -1,6 +1,6 @@
----------------------
-Design Document v.1.0
----------------------
+-----------------------
+ Design Document v.1.0
+-----------------------
 
 SUMMARY
 
@@ -15,6 +15,9 @@ SUMMARY
    
    There will also be a notification system that allows for users to send an e-mail or notification to the seller or
    trader in order to contact them to discuss about a possible deal.
+   
+   The website will be designed to be 'mobile friendly', which means that it will display its contents in an easily
+   readable and viewable manner on mobile devices.
 
 ----------------------------------------------------------------------------------------------------------------------
 
