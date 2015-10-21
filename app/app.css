@@ -27,4 +27,15 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+
+.header {
+  position: relative;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 50px;
+  line-height: 1.5;
+  color: #767676;
+  border-top: 1px solid #eee;
+}
 }
