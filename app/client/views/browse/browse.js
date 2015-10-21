@@ -1,0 +1,14 @@
+'use strict';
+
+angular.module('myApp.browse', ['ngRoute'])
+
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/browse', {
+    templateUrl: 'client/views/browse/browse.html',
+    controller: 'BrowseCtrl'
+  });
+}])
+
+.controller('BrowseCtrl', [function() {
+
+}]);
