@@ -1,23 +1,26 @@
 <!--browse.html-->
-<h1 align="center">BROWSE</h1>
+<h1>BROWSE</h1>
+<!-- Department -->
 <div class="container">
-    <form data-ng-submit="browse()" role="form">
-        <fieldset>
-        <!-- Department -->
         <div class="form-group">
         <label for="department">Select Department:</label>
-            <select data-ng-model="department" class="form-control" id="department" ng-options="item._id as item.name for item in departments" placeholder="Department" required></select>
+        <select class="form-control" id="department">
+            <option>Dept 1</option>
+            <option>Dept 2</option>
+            <option>Dept 3</option>
+            <option>Dept 4</option>
+        </select>
         </div>
-        <!-- Class -->
+    </form>
+    <form role="form">
         <div class="form-group">
             <label for="class">Select Class:</label>
-            <select data-ng-model="class" class="form-control" id="class" ng-options="item._id as item.name for item in classes" placeholder="Class" required></select>
+            <select class="form-control" id="class">
+                <option>Class 1</option>
+                <option>Class 2</option>
+                <option>Class 3</option>
+                <option>Class 4</option>
+            </select>
         </div>
-
-        <!-- Submit -->
-        <div class="form-group">
-            <input type="submit" class="btn btn-default">
-        </div>
-        </fieldset>
     </form>
 </div>

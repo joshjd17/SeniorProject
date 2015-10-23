@@ -10,7 +10,5 @@ angular.module('myApp.makepost', ['ngRoute'])
 }])
 
 .controller('MakePostCtrl', [function($scope) {
-      $scope.post = function(){
-        // Post control here
-      };
+
 }]);
