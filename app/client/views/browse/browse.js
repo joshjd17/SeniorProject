@@ -9,6 +9,8 @@ angular.module('myApp.browse', ['ngRoute'])
   });
 }])
 
-.controller('BrowseCtrl', [function() {
-
+.controller('BrowseCtrl', [function($scope) {
+      $scope.browse = function(){
+        // Browse control here
+      };
 }]);
