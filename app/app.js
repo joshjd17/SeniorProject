@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.main',
   'myApp.browse',
+  'myApp.browsing',
   'myApp.about',
   'myApp.contact',
   'myApp.makepost',
