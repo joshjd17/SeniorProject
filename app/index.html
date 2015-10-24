@@ -93,6 +93,7 @@
   <script src="app.js"></script>
   <script src="client/views/main/main.js"></script>
   <script src="client/views/browse/browse.js"></script>
+  <script src="client/views/browse/browsing.js"></script>
   <script src="client/views/about/about.js"></script>
   <script src="client/views/contact/contact.js"></script>
   <script src="client/views/post/makepost/makepost.js"></script>
@@ -107,3 +108,20 @@
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<!-- Design notes -->
+<!-- This is the static page that will provide the navigation bar for the website. All of the partials
+     will be loaded from this page using the <div ng-view></div> code. The navigation buttons are the
+     Book Bodega button (leads to main.html), the About button (leads to about.html), Browse button (leads
+     to browse.html), Post button (leads to makepost.html), and Contact button (leads to contact.html).
+     The Search Bar will provide a quick look up to the specific information the user wants.
+
+     Key Points:
+        - The page that contains the navigation bar and loads the partials
+        - Contains navigation to main.html (using Book Bodega)
+        - Contains navigation to about.html (using About)
+        - Contains navigation to browse.html (using Browse)
+        - Contains navigation to makepost.html (using Post)
+        - Contains navigation to contact.html (using Contact)
+        - Quick look up to posts provided by Search Bar
+-->

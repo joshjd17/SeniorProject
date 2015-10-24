@@ -48,14 +48,14 @@
 
             <h3 align="center">Contact Information:</h3>
             <!-- Contact Information -->
-            <!-- Client Name -->
+            <!-- Contact Name -->
             <div class="form-group">
                 <label class="control-label" for="name">Contact Name:</label>
                 <div class="controls">
                     <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
                 </div>
             </div>
-            <!-- Client E-Mail -->
+            <!-- Contact E-Mail -->
             <div class="form-group">
                 <label class="control-label" for="email">Contact E-Mail:</label>
                 <div class="controls">
@@ -95,11 +95,10 @@
             -->
 
             <!-- Submit -->
-            <!--
             <div class="form-group">
                 <input type="submit" id="submit" class="btn btn-default">
             </div>
-            -->
+
             <!-- DEBUG Submit -->
             <div class="form-group">
                 <a class="btn btn-default" href="#/viewpost">DEBUG Submit</a>
@@ -107,3 +106,20 @@
         </fieldset>
     </form>
 </div>
+
+<!-- Design Notes -->
+<!-- All fields are accessible during initialization. All of the fields must be filled in before the Submit
+     button takes the user to the (viewpost.html). If any field is not filled in or selected, then the user
+     will be prompted to fill in or select the specific field. The Contact Name and Contact E-Mail fields
+     allow for the exclusion of the login/registration pages. The Post Type field will determine whether the
+     Asking Price field is displayed (in the case of Sell), or the Trade Title is displayed (in the case
+     of Trade). Most of the fields will communicate with the database for storage or retrieval of information.
+
+     Key Points:
+        - Contact Name and Contact E-Mail exclude the need for login/registration
+        - All fields visible on initialization
+        - All fields must be filled in before hitting Submit, user is prompted otherwise
+        - Trade and Sell determine whether Asking Price or Trade Title is visible for the Transaction Information
+        - Department and Class information retrieved from database
+        - (TENTATIVE) Book Information, Contact Information and Transaction Information stored in database
+-->

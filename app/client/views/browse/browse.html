@@ -18,6 +18,24 @@
         <div class="form-group">
             <input type="submit" class="btn btn-default">
         </div>
+
+        <!-- DEBUG Submit -->
+        <div class="form-group">
+            <a class="btn btn-default" href="#/browsing">DEBUG Submit</a>
+        </div>
         </fieldset>
     </form>
 </div>
+
+<!-- Design Notes -->
+<!-- The Department select field should be the only field currently on screen during initialization.
+     When the user selects a valid department, the Class select field will be displayed/un-hide itself.
+     When both a valid Department and Class are selected, the user can hit the submit button to go to the main
+     browse page (browsing.html). The Department and Class fields will be populated by the database.
+
+     Key Points:
+        - Department and Class fields populated from the database
+        - Class Select field hidden until valid Department selected
+        - Submit when valid selections are provided for Department and Class fields
+        - Prompt user if no selection is made in either field when Submit button is pressed
+-->
