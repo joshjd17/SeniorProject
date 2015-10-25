@@ -27,6 +27,7 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
 
 .header {
   position: relative;
@@ -38,4 +39,19 @@
   color: #767676;
   border-top: 1px solid #eee;
 }
+
+.navbar-collapse {
+  background-color: #3F1A0A;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #EDD51C;
+}
+
+.navbar-default .navbar-brand {
+  color: #FFFFFF;
+}
+
+.container-fluid {
+  background-color: #3F1A0A;
 }
