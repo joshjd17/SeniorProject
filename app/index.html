@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <!-- Bootstrap CDN -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -25,7 +27,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="app.css" type="text/style">
+  <link rel="stylesheet" href="app.css">
 
 </head>
 <body>
@@ -61,9 +63,9 @@
         <li><a href="#/makepost">Post</a></li>
         <li><a href="#/contact">Contact</a></li>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
+      <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Search for Book">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
@@ -85,6 +87,7 @@
   -->
   <div>Book Bodega: v<span app-version></span></div>
 
+  <!-- Placed at the end of the document so the pages load faster -->
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
@@ -102,10 +105,6 @@
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
 
-<!-- Placed at the end of the document so the pages load faster -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </body>
 </html>
 
