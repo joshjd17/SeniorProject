@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 //REST API
 app.get('/api/posts',postsController.list);
 app.post('api/posts', postsController.create);
-
+app.get('/api/posts/dept/ComputerScience',postsController.csPosts);
 app.listen(3000, function() {
     console.log('I\'m Listening...');
 })

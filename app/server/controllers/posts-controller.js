@@ -15,4 +15,9 @@ module.exports.list = function(req,res){
     bbPosts.find({},function(err,results){
         res.json(results);
     });
+module.exports.csPosts = function(req,res){
+    bbPosts.find({'dept': 'Computer Science'},function(err,results){
+        res.json(results);
+    });
+}
 }
