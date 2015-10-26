@@ -1,7 +1,7 @@
 <!--makepost.html-->
 <h1 align="center">POST</h1>
-<div class="container">
-    <form data-ng-submit="post()" role="form" novalidate>
+<div class="container" ng-controller="postsController">
+    <form data-ng-submit="createPost()" role="form" novalidate>
         <fieldset>
             <!-- Post Type -->
             <div class="form-group">
@@ -93,7 +93,7 @@
 
             <!-- Submit -->
             <div class="form-group">
-                <input type="submit" id="submit" class="btn btn-default">
+                <input type="submit" id="submit" class="btn btn-default" >
             </div>
 
             <!-- DEBUG Submit -->
