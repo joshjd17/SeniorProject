@@ -6,7 +6,7 @@
             <!-- Post Type -->
             <div class="form-group">
                 <label for="postType">Post Type:</label>
-                <select data-ng-model="postType" class="form-control" id="postType" required>
+                <select data-ng-model="saleType" class="form-control" id="postType" required>
                     <option>Sell</option>
                     <option>Trade</option>
                 </select>
@@ -14,12 +14,12 @@
             <!-- Department -->
             <div class="form-group">
                 <label for="department">Select Department:</label>
-                <select data-ng-model="department" class="form-control" id="department" ng-options="item._id as item.name for item in departments" placeholder="Department" required></select>
+                <select data-ng-model="dept" class="form-control" id="department" ng-options="item._id as item.name for item in departments" placeholder="Department" required></select>
             </div>
             <!-- Class -->
             <div class="form-group">
                 <label for="class">Select Class:</label>
-                <select data-ng-model="class" class="form-control" id="class" ng-options="item._id as item.name for item in classes" placeholder="Class" required></select>
+                <select data-ng-model="course" class="form-control" id="class" ng-options="item._id as item.name for item in classes" placeholder="Class" required></select>
             </div>
 
             <h3 align="center">Book Information:</h3>
@@ -42,7 +42,7 @@
             <div class="form-group">
                 <label class="control-label" for="author">Book ISBN:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="isbn" id="isbn" class="form-control" placeholder="ISBN:" required>
+                    <input type="text" data-ng-model="ISBN" id="isbn" class="form-control" placeholder="ISBN:" required>
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
             <div class="form-group">
                 <label class="control-label" for="name">Contact Name:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                    <input type="text" data-ng-model="userName" id="name" class="form-control" placeholder="Name" required>
                 </div>
             </div>
             <!-- Contact E-Mail -->
