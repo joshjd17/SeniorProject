@@ -56,13 +56,10 @@ var mailCreator = function(users) {
     }
     return mailing;
 }
-
+//set up when the email gets posted and sent to matching users
 //var mailScheduler = function (job) {
     // set rules for scheduler
   //  var rule = new schedule.RecurrenceRule();
-    //rule.dayOfWeek = [new schedule.Range(0, 6)];
-    //rule.hour = 16;
-    //rule.minute = 38;
 
     //schedule.scheduleJob(rule, job);
 //};
@@ -84,7 +81,7 @@ var mailSender = function (SellersEmail, subject, html) {
         subject:  subject,
         html: html
     };
-    // send your mailgun instance the mailData
+    // send  mailgun instance the mailData
     mailgun.messages().send(mailData, function (err, body) {
         // catch any errors
         if (err) {
