@@ -8,8 +8,10 @@ var express           = require('express'),
     postsController    = require('./server/controllers/posts-controller.js');
 //Conects to db, db has 2 collections: bbPosts and bbBooks
 mongoose.connect('mongodb://localhost:27017/bbDB');
+
 //bodyParser reads body of HTTP messages
 app.use(bodyParser());
+
 
 
 app.get('/', function (req, res) {
