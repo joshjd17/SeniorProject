@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <!-- Additional CSS -->
+  <!--
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <!-- Bootstrap CDN -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+<!--
+  <ul class="menu">
+    <li><a href="#/main">Main</a></li>
+    <li><a href="#/browse">Browse</a></li>
+    <li><a href="#/about">About</a></li>
+    <li><a href="#/contact">Contact</a></li>
+    <li><a href="#/makepost">MakePost</a></li>
+    <li><a href="#/viewpost">ViewPost</a></li>
+  </ul>
+-->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/main/main.html">BOOK BODEGA</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="header">
+      <ul class="nav navbar-nav">
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/browse">Browse</a></li>
+        <li><a href="#/makepost">Post</a></li>
+        <li><a href="#/contact">Contact</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search for Book">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div ng-view></div>
+
+  <!-- Footer -->
+  <!--
+  <p class="Footer_copyright">
+     © 2015 Senior Project - Justin Lok, Craig Fee, Joshua Dickinson
+  </p>
+  -->
+  <div>Book Bodega: v<span app-version></span></div>
+
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="app.js"></script>
+  <script src="client/views/main/main.js"></script>
+  <script src="client/views/browse/browse.js"></script>
+  <script src="client/views/browse/browsing.js"></script>
+  <script src="client/views/about/about.js"></script>
+  <script src="client/views/contact/contact.js"></script>
+  <script src="client/views/post/makepost/makepost.js"></script>
+  <script src="client/views/post/viewpost/viewpost.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+</body>
+</html>
+
+<!-- Design notes -->
+<!-- This is the static page that will provide the navigation bar for the website. All of the partials
+     will be loaded from this page using the <div ng-view></div> code. The navigation buttons are the
+     Book Bodega button (leads to main.html), the About button (leads to about.html), Browse button (leads
+     to browse.html), Post button (leads to makepost.html), and Contact button (leads to contact.html).
+     The Search Bar will provide a quick look up to the specific information the user wants.
+
+     Key Points:
+        - The page that contains the navigation bar and loads the partials
+        - Contains navigation to main.html (using Book Bodega)
+        - Contains navigation to about.html (using About)
+        - Contains navigation to browse.html (using Browse)
+        - Contains navigation to makepost.html (using Post)
+        - Contains navigation to contact.html (using Contact)
+        - Quick look up to posts provided by Search Bar
+-->
