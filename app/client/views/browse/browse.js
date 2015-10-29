@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.browse', ['ngRoute','ngResource'])
+angular.module('myApp.browse', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/browse', {
@@ -11,6 +11,6 @@ angular.module('myApp.browse', ['ngRoute','ngResource'])
 
 .controller('BrowseCtrl', [function($scope) {
       $scope.browse = function(){
-         //Browse control here
+        // Browse control here
       };
 }]);

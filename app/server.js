@@ -13,13 +13,15 @@ app.use(bodyParser());
 
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname+ '/index.html');
+    res.sendFile(__dirname+ 'index.html');
 });
+
+
 
 //REST API
 app.get('/api/posts',postsController.list);
 app.post('api/posts', postsController.create);
-app.get('/api/posts/dept/ComputerScience',postsController.csPosts);
+
 app.listen(3000, function() {
     console.log('I\'m Listening...');
 })

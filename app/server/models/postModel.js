@@ -5,21 +5,12 @@
 
 var mongoose = require('mongoose');
 
-var bookSchema = mongoose.model('bbBook', {
-    title: String,
-    author: String,
-    ISBN:String,
-    dept: String,
-    course: String
-});
-
-var postSchema = mongoose.model('post',{
+module.exports = mongoose.model('post',{
     email: String,
     userName: String,
-    book: [bookSchema],
+    title: String,
+    author: String,
+    ISBN: String,
     saleType: String
 
 });
-
-module.exports = bookSchema;
-module.exports = postSchema;

@@ -9,9 +9,9 @@ angular.module('myApp', [
   'myApp.browsing',
   'myApp.about',
   'myApp.contact',
-  'myApp.makepost',
   'myApp.viewpost',
-  'myApp.version'
+  'myApp.version',
+  'myApp.postsController'
 ]).
 
 
