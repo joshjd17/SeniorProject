@@ -195,7 +195,9 @@ DESIGN/UI:
             ~ Title: Name of the book the user wants to sell
             ~ Author: Name of the author for the book the user wants to sell
             ~ ISBN: ISBN for the book the user wants to sell
-            ~ Condition: The condition of the book the user wants to sell (New, Good, Fair, etc.)
+            ~ Condition: The condition of the book the user wants to sell (New, Good, Fair, etc.) ***
+            ~ Contact Name: The name of the seller
+            ~ Contact E-mail: The e-mail of the seller
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Sell.png
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Sell%20Scrolled.png
          
@@ -209,7 +211,9 @@ DESIGN/UI:
             ~ Title: Name of the book the user wants to trade
             ~ Author: Name of the author for the book the user wants to trade
             ~ ISBN: ISBN for the book the user wants to trade
-            ~ Condition: The condition of the book the user wants to trade (New, Good, Fair, etc.)
+            ~ Condition: The condition of the book the user wants to trade (New, Good, Fair, etc.) ***
+            ~ Contact Name: The name of the trader
+            ~ Contact E-mail: The e-mail of the trader
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Trade.png
          = https://github.com/joshjd17/SeniorProject/blob/master/Template%20Images/Post%20-%20Trade%20Scrolled.png
    
@@ -236,6 +240,9 @@ PROTOTYPE:
       = All of the posts are stored into the database under 'posts'
       = TODO: Implement more navigation and more advanced schemas
    - https://github.com/joshjd17/SeniorProject/tree/prototype-bb/PrototypeBB
+   
+APPLICATION:   
+   https://github.com/joshjd17/SeniorProject/tree/BookBodega
    
 ----------------------------------------------------------------------------------------------------------------------
 
