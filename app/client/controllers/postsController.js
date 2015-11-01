@@ -24,4 +24,15 @@ myApp.controller('postsController',[ '$scope', '$resource', function ($scope, $r
             $scope.postName = '';
         });
     }
+    //put post data from post into database
+    //post and postbutonn are not defined in front end yet
+    $scope.postbutton = function() {
+    console.log($scope.post);
+        
+    $http.post('/bbPosts', $scope.post).success(function(response){
+        console.log(response);
+        refresh();
+    });
+};
+        
 }]);
