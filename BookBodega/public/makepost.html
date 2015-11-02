@@ -1,0 +1,126 @@
+<!--makepost.html-->
+<h1 align="center">POST</h1>
+<div class="container">
+    <form data-ng-submit="post()" role="form" novalidate>
+        <fieldset>
+            <!-- Post Type -->
+            <div class="form-group">
+                <label for="postType">Post Type:</label>
+                <select data-ng-model="postType" class="form-control" id="postType" required>
+                    <option>Sell</option>
+                    <option>Trade</option>
+                </select>
+            </div>
+            <!-- Department -->
+            <div class="form-group">
+                <label for="department">Select Department:</label>
+                <!--<select data-ng-model="department" class="form-control" id="department" ng-options="item._id as item.name for item in departments" placeholder="Department" required></select>-->
+            </div>
+            <!-- Class -->
+            <div class="form-group">
+                <label for="class">Select Class:</label>
+                <!--<select data-ng-model="class" class="form-control" id="class" ng-options="item._id as item.name for item in classes" placeholder="Class" required></select>-->
+            </div>
+
+            <h3 align="center">Book Information:</h3>
+            <!-- Book Information -->
+            <!-- Book Title -->
+            <div class="form-group">
+                <label class="control-label" for="title">Book Title:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
+                </div>
+            </div>
+            <!-- Book Author -->
+            <div class="form-group">
+                <label class="control-label" for="author">Book Author:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="author" id="author" class="form-control" placeholder="Author" required>
+                </div>
+            </div>
+            <!-- Book ISBN -->
+            <div class="form-group">
+                <label class="control-label" for="author">Book ISBN:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="isbn" id="isbn" class="form-control" placeholder="ISBN:" required>
+                </div>
+            </div>
+
+            <h3 align="center">Contact Information:</h3>
+            <!-- Contact Information -->
+            <!-- Contact Name -->
+            <div class="form-group">
+                <label class="control-label" for="name">Contact Name:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                </div>
+            </div>
+            <!-- Contact E-Mail -->
+            <div class="form-group">
+                <label class="control-label" for="email">Contact E-Mail:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="email" id="email" class="form-control" placeholder="E-Mail" required>
+                </div>
+            </div>
+
+            <!-- Transaction Information -->
+            <!-- Sell Information -->
+            <h3 align="center">Selling for...</h3>
+            <!-- Sell Price -->
+            <div class="form-group">
+                <label class="control-label" for="price">Asking Price:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="price" id="price" class="form-control" placeholder="Price" required>
+                </div>
+            </div>
+
+            <!-- Trade Information -->
+            <h3 align="center">Trading for...</h3>
+            <!-- Trade Title -->
+            <div class="form-group">
+                <label class="control-label" for="tradetitle">Book Title:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="tradetitle" id="tradetitle" class="form-control" placeholder="Title" required>
+                </div>
+            </div>
+            <!-- Trade Author -->
+            <div class="form-group">
+                <label class="control-label" for="tradeauthor">Book Author:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="tradeauthor" id="tradeauthor" class="form-control" placeholder="Author" required>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group">
+                <input type="submit" id="submit" class="btn btn-default" >
+            </div>
+
+            <!-- DEBUG Submit -->
+            <div class="form-group">
+                <a class="btn btn-default" href="#/viewpost">DEBUG Submit</a>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<!--<script type="text/javascript" src="C:\Users\cfee8_000\WebstormProjects\BookBodega\app\client\controllers\postsController.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
+
+
+
+<!-- Design Notes -->
+<!-- All fields are accessible during initialization. All of the fields must be filled in before the Submit
+     button takes the user to the (viewpost.html). If any field is not filled in or selected, then the user
+     will be prompted to fill in or select the specific field. The Contact Name and Contact E-Mail fields
+     allow for the exclusion of the login/registration pages. The Post Type field will determine whether the
+     Asking Price field is displayed (in the case of Sell), or the Trade Title is displayed (in the case
+     of Trade). Most of the fields will communicate with the database for storage or retrieval of information.
+
+     Key Points:
+        - Contact Name and Contact E-Mail exclude the need for login/registration
+        - All fields visible on initialization
+        - All fields must be filled in before hitting Submit, user is prompted otherwise
+        - Trade and Sell determine whether Asking Price or Trade Title is visible for the Transaction Information
+        - Department and Class information retrieved from database
+        - (TENTATIVE) Book Information, Contact Information and Transaction Information stored in database
+-->
