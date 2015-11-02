@@ -15,6 +15,7 @@ var api = require('./routes/api');
 var mongoose = require('mongoose');
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/bodegatest');
+//mongoose.connect('mongodb://bbadmin:bodegatest@ds045714.mongolab.com:45714/bodegatest')
 
 var app = express();
 

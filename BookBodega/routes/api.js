@@ -6,15 +6,21 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require( 'mongoose' );
 var Post = mongoose.model('Post');
-var User = mongoose.model('User');
 
 //router.use('/posts');
 
 router.route('/posts')
+
     //creates a new post
     .post(function(req, res){
         var post = new Post();
-        post.title = this.title;
+        post.email = req.body.email;
+        post.title = req.body.title;
+        post.userName = req.body.userName;
+        post.author = req.body.author;
+        post.isbn = req.body.isbn;
+        post.saleType = req.body.saleType;
+        post.price = req.body.price;
         post.save(function(err, post) {
             if (err){
                 return res.send(500, err);
