@@ -13,19 +13,32 @@
 	<h1>Simplest MEANapp Ever</h1>
 </div>
 <div class="container">
-	<input class = "form-control" placeholder ="Factor1" ng-model ="products.factor1"></input>
+	<input class = "form-control" placeholder ="Title" ng-model ="post.book.title"></input>
 		
 </div>
 <div class="container">
-	<input class= "form-control" placeholder="Factor2" ng-model ="products.factor2"></input>
+	<input class = "form-control" placeholder ="Author" ng-model ="post.book.author"></input>
+		
+</div>
+<div class="container">
+	<input class = "form-control" placeholder ="ISBN" ng-model ="post.book.isbn"></input>
+		
+</div>
+<div class="container">
+	<input class = "form-control" placeholder ="name" ng-model ="post.userName"></input>
+		
+</div>
+<div class="container">
+	<input class= "form-control" placeholder="Email" ng-model ="post.email"></input>
 	
-	<button class="btn btn-primary" ng-click="addProduct()">Add</button>
+	<button class="btn btn-primary" ng-click="createPost()">submit</button>
 </div>
 <div class="col-md-2">
-	<h3>Products in the database</h3>
+	<h3>Posts in the database</h3>
 			<ul>
-				<li ng-repeat='products in productlist'>
-					{{products.factor1}}*{{products.factor2}}={{products.factor1*products.factor2}}
+				<li ng-repeat='post in postlist'>
+					{{post.book.title}}	
+
 				</li>
 			</ul>
 </div>
