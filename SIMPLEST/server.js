@@ -33,10 +33,10 @@ app.get('/deptlist', function (req, res) {
 */
 app.get('/deptlist',function(req,res) {
 	console.log("I received a dept GET request");
-	db.postlist.distinct("department", function (err, docs) {
+	db.postlist.distinct('department', {}, function(err, docs) {
 		console.log(docs);
 		res.json(docs);
-	});
+		});
 });
 /*
 app.post('/deptlist', function (req, res) {

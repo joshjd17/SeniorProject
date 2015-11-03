@@ -65,17 +65,17 @@ myApp.controller('appController',['$scope','$http',
 
 myApp.controller('browseController',['$scope','$http',
 	function($scope,$http) {
-		console.log("hello world from the controller");
+		console.log("hello world from the controller browse");
 
-		var deptList = function () {
+		$scope.deptList = function () {
 
 			$http.get('/deptlist').success(function (response) {
 				console.log("I got the dept data");
-				$scope.deptlist = response;
+				$scope.postlist = response;
 			});
 		};
 
-		deptList();
+		//deptList();
 /*
 		// DEV USE ONLY
 		$scope.createDept = function () {
