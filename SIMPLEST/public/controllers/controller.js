@@ -72,12 +72,11 @@ myApp.controller('browseController',['$scope','$http',
 			$http.get('/deptlist').success(function (response) {
 				console.log("I got the dept data");
 				$scope.deptlist = response;
-
 			});
 		};
 
 		deptList();
-
+/*
 		// DEV USE ONLY
 		$scope.createDept = function () {
 			console.log($scope.post);
@@ -86,5 +85,5 @@ myApp.controller('browseController',['$scope','$http',
 				console.log(response);
 			});
 		};
-
+*/
 }]);
