@@ -6,7 +6,7 @@
             <!-- Department -->
             <div class="form-group">
                 <label for="department">Select Department:</label>
-                <select ng-click="deptList()" ng-options="post.department for post in deptlist" data-ng-model="department" class="form-control" id="department"  required>
+                <select ng-click="deptList()" ng-options="department for dept in deptlist" data-ng-model="department" class="form-control" id="department"  required>
 
                 </select>
 
@@ -25,6 +25,18 @@
             <!-- DEBUG Submit -->
             <div class="form-group">
                 <a class="btn btn-default" href="#/browsing">DEBUG Submit</a>
+            </div>
+
+            <!-- DEV USE ONLY -->
+            <div class="form-group">
+                <label class="control-label" for="addDept">Book Author:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="department" id="addDept" class="form-control" placeholder="Department" required>
+                </div>
+            </div>
+            <!-- DEBUG Submit -->
+            <div class="form-group">
+                <button class="btn btn-primary" ng-click="createDept()">Submit</button>
             </div>
         </fieldset>
     <!--</form>-->
