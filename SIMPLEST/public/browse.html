@@ -6,12 +6,15 @@
             <!-- Department -->
             <div class="form-group">
                 <label for="department">Select Department:</label>
-                <select data-ng-model="department" class="form-control" id="department" ng-options="item._id as item.name for item in departments" placeholder="Department" required></select>
+                <select ng-click="deptList()" ng-options="post.department for post in deptlist" data-ng-model="department" class="form-control" id="department"  required>
+
+                </select>
+
             </div>
             <!-- Class -->
             <div class="form-group">
                 <label for="class">Select Class:</label>
-                <select data-ng-model="class" class="form-control" id="class" ng-options="item._id as item.name for item in classes" placeholder="Class" required></select>
+                <select data-ng-model="class" class="form-control" id="class"  required></select>
             </div>
 
             <!-- Submit -->
@@ -26,6 +29,7 @@
         </fieldset>
     <!--</form>-->
 </div>
+
 
 <!-- Design Notes -->
 <!-- The Department select field should be the only field currently on screen during initialization.
