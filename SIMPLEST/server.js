@@ -17,7 +17,7 @@ app.post('/postlist', function(req, res){
 	db.postlist.insert(req.body,function(err,doc){
 		res.json(doc);
 	});
-app.get('/getDept',function(req,res){
+app.get('/deptlist',function(req,res){
 	console.log("I received a dept GET request");
 	db.postlist.distinct("department",function(err,docs){
 		console.log(docs);
