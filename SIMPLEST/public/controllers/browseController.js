@@ -9,10 +9,11 @@ myApp.controller('browseController',['$scope','$http',
         var deptList = function () {
 
             $http.get('/deptlist').success(function (response) {
-                console.log("I got the  dept data");
+                console.log("I got the dept data");
                 $scope.deptlist = response;
 
             });
         };
+        deptList();
     }]);
-            deptList();
+

@@ -50,26 +50,30 @@ myApp.controller('appController',['$scope','$http',
 		refresh();
 
 
-
 //defines function for the add button 
 //calls $http.post, to create a post request to /productlist
 //sending $scope.products as the body of the req
 		$scope.createPost = function () {
 			console.log($scope.post);
 
-
 			$http.post('/postlist', $scope.post).success(function (response) {
 				console.log(response);
 				refresh();
 			});
 		};
+}]);
 
+myApp.controller('browseController',['$scope','$http',
+	function($scope,$http) {
+		console.log("hello world from the controller");
 
+		var deptList = function () {
 
+			$http.get('/postlist').success(function (response) {
+				console.log("I got the dept data");
+				$scope.deptlist = response;
 
-
-
-
-
- 
+			});
+		};
+		deptList();
 }]);
