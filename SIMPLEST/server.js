@@ -32,7 +32,8 @@ app.get('/deptlist',function(req,res) {
 
 app.get('/classlist',function(req,res) {
 	console.log("I received a class GET request");
-	db.postlist.distinct('class', {}, function(err, docs) {
+
+	db.postlist.distinct('class', {/*"department": need to get $scope.department here*/}, function(err, docs) {
 		console.log(docs);
 		res.json(docs);
 	});

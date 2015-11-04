@@ -71,14 +71,15 @@ myApp.controller('appController',['$scope','$http',
 		};
 		deptList();
 
-		var classList = function () {
 
+		 $scope.classList = function () {
+			console.log($scope.department);
 			$http.get('/classlist').success(function (response) {
 				console.log("I got the class data");
 				$scope.classlist = response;
 			});
 		};
-		classList();
+
 
 		// Toggle Sell and Trade options
 		$scope.postType = '';
