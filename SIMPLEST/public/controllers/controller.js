@@ -80,7 +80,7 @@ myApp.controller('appController',['$scope','$http',
 		 $scope.classList = function () {
 			console.log($scope.department);
 			$http.get('/classlist').success(function (response) {
-				console.log("I got the class data");
+				console.log("I got the class data: "+ response);
 				$scope.classlist = response;
 			});
 		};

@@ -40,7 +40,7 @@ app.get('/classlist',function(req,res) {
 	console.log("I received a class GET request");
 	console.log("deptSelect = "+deptSelect);
 
-	db.postlist.distinct('class', {"department": deptSelect}, function(err, docs) {
+	db.postlist.distinct('class', {department : deptSelect.toString()}, function(err, docs) {
 		console.log(docs);
 		res.json(docs);
 	});
