@@ -71,6 +71,11 @@ myApp.controller('appController',['$scope','$http',
 		};
 		deptList();
 
+		 $scope.getDept = function(){
+			 $http.post('/deptlist',[$scope.department]).success(function(response){
+				 console.log(response);
+			 });
+		 };
 
 		 $scope.classList = function () {
 			console.log($scope.department);
@@ -85,26 +90,5 @@ myApp.controller('appController',['$scope','$http',
 		$scope.postType = '';
 }]);
 
-myApp.controller('browseController',['$scope','$http',
-	function($scope,$http) {
-		console.log("hello world from the controller browse");
 
-		var deptList = function () {
-
-			$http.get('/deptlist').success(function (response) {
-				console.log("I got the dept data");
-				$scope.deptlist = response;
-			});
-		};
-		deptList();
-
-		var classList = function () {
-
-			$http.get('/classlist').success(function (response) {
-				console.log("I got the class data");
-				$scope.classlist = response;
-			});
-		};
-		classList();
-}]);
 

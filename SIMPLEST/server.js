@@ -5,7 +5,7 @@ var db = mongojs('bbApp',['postlist','deptlist']);
 var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + "/public"));
-app.use(bodyParser.json());
+app.use(bodyParser.json({strict: false}));
 
 app.get('/postlist', function(req, res) {
 	console.log("I received a GET request");
@@ -18,6 +18,7 @@ app.get('/postlist', function(req, res) {
 app.post('/postlist', function (req, res) {
 	console.log(req.body);
 	db.postlist.insert(req.body, function (err, doc) {
+		console.log(doc);
 		res.json(doc);
 	});
 });
@@ -29,11 +30,17 @@ app.get('/deptlist',function(req,res) {
 		res.json(docs);
 		});
 });
+var deptSelect;
+app.post('/deptlist', function(req,res){
+	console.log("this is the req body " + req.body);
+	deptSelect = req.body;
+});
 
 app.get('/classlist',function(req,res) {
 	console.log("I received a class GET request");
+	console.log("deptSelect = "+deptSelect);
 
-	db.postlist.distinct('class', {/*"department": need to get $scope.department here*/}, function(err, docs) {
+	db.postlist.distinct('class', {"department": deptSelect}, function(err, docs) {
 		console.log(docs);
 		res.json(docs);
 	});
