@@ -1,47 +1,36 @@
 <!--browsing.html-->
-<!-- <div ng-controller = 'appController'>
-<h1 align="center">BROWSING</h1>
-<ul>
-    <li ng-repeat='post in postlist'>
-        {{post.book.title}}
-    </li>
-</ul>
-</div> -->
-<body>
-	<div ng-controller="appController">
-		<h1 align="center">BROWSING</h1>
+<div ng-controller="appController">
+    <h1 align="center">BROWSING</h1>
 
-		<table class="table">
-			<thread>
-				<tr>
-					<th>Title</th>
-					<th>Author</th>
-					<th>ISBN</th>
-					<th>Price</th>
-					<th>Name</th>
-					<th>Trade for</th>
-					<th>Author</th>
-					<th>Contact</th>
-				</tr>
-			</thread>
-			<tbody>
-				
-				 <tr ng-repeat ="post in postlist">
-				 	<td>{{post.book.title}}</td>
-				 	<td>{{post.book.author}}</td>
-				 	<td>{{post.book.isbn}}</td>
-				 	<td>{{post.sell.price}}</td>
-				 	<td>{{post.contact.name}}</td>
-				 	<td>{{post.trade.title}}</td>
-				 	<td>{{post.trade.author}}</td>
-				 	<td>{{post.contact.email}}</td>
+    <table class="table">
+        <thread>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Price</th>
+                <th>Name</th>
+                <th>Trade for</th>
+                <th>Author</th>
+                <th>Contact</th>
+            </tr>
+        </thread>
+        <tbody>
 
+        <tr ng-repeat ="post in postlist">
+            <td>{{post.book.title}}</td>
+            <td>{{post.book.author}}</td>
+            <td>{{post.book.isbn}}</td>
+            <td>{{post.sell.price}}</td>
+            <td>{{post.contact.name}}</td>
+            <td>{{post.trade.title}}</td>
+            <td>{{post.trade.author}}</td>
+            <td>{{post.contact.email}}</td>
+        </tr>
 
-				 </tr>
-				
-			</tbody>
-		</table>
-	</div>
+        </tbody>
+    </table>
+</div>
 <!-- Design Notes -->
 <!-- This is the browsing page that the user will access after they provide valid selections
      for the browse page (browse.html). It displays the posts that are found that contain the
