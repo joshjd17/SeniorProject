@@ -71,6 +71,16 @@ myApp.controller('appController',['$scope','$http',
 		};
 
 		deptList();
+
+		var classList = function () {
+
+			$http.get('/classlist').success(function (response) {
+				console.log("I got the class data");
+				$scope.classlist = response;
+			});
+		};
+
+		classList();
 }]);
 
 myApp.controller('browseController',['$scope','$http',
@@ -86,5 +96,15 @@ myApp.controller('browseController',['$scope','$http',
 		};
 
 		deptList();
+
+		var classList = function () {
+
+			$http.get('/classlist').success(function (response) {
+				console.log("I got the class data");
+				$scope.classlist = response;
+			});
+		};
+
+		classList();
 }]);
 

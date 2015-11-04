@@ -22,15 +22,7 @@ app.post('/postlist', function (req, res) {
 		res.json(doc);
 	});
 });
-/*
-app.get('/deptlist', function (req, res) {
-	console.log("I received a dept GET request");
-	db.deptlist.find(function (err, docs) {
-	console.log(docs);
-	res.json(docs);
-	});
-});
-*/
+
 app.get('/deptlist',function(req,res) {
 	console.log("I received a dept GET request");
 	db.postlist.distinct('department', {}, function(err, docs) {
@@ -38,13 +30,14 @@ app.get('/deptlist',function(req,res) {
 		res.json(docs);
 		});
 });
-/*
-app.post('/deptlist', function (req, res) {
-		console.log(req.body);
-		db.deptlist.insert(req.body, function (err, doc) {
-		res.json(doc);
+
+app.get('/classlist',function(req,res) {
+	console.log("I received a class GET request");
+	db.postlist.distinct('class', {}, function(err, docs) {
+		console.log(docs);
+		res.json(docs);
 	});
 });
-*/
+
 app.listen(8000);
 console.log("Server listening on port 8000");

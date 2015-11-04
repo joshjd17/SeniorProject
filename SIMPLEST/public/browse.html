@@ -12,7 +12,7 @@
             <!-- Class -->
             <div class="form-group">
                 <label for="class">Select Class:</label>
-                <select data-ng-model="class" class="form-control" id="class" required></select>
+                <select ng-click="classList()" ng-options="class as class for class in classlist" data-ng-model="class" class="form-control" id="class" \required>
             </div>
 
             <!-- Submit -->
