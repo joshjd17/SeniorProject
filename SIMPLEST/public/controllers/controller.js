@@ -86,15 +86,5 @@ myApp.controller('browseController',['$scope','$http',
 		};
 
 		deptList();
-/*
-		// DEV USE ONLY
-		$scope.createDept = function () {
-			console.log($scope.post);
-
-			$http.post('/deptlist', $scope.post).success(function (response) {
-				console.log(response);
-			});
-		};
-*/
 }]);
 
