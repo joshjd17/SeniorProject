@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express();
-var dept = express();
 var mongojs = require('mongojs');
 var db = mongojs('bbApp',['postlist','deptlist']);
 var bodyParser = require('body-parser');

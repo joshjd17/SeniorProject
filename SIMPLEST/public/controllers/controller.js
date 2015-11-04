@@ -2,7 +2,7 @@ var myApp = angular.module('myApp',['ngRoute', 'ngResource']);
 
 myApp.config(function($routeProvider){
 	$routeProvider
-		//the timeline display
+		// To access the HTML partials
 		.when('/', {
 			templateUrl: 'main.html',
 		})
@@ -50,7 +50,7 @@ myApp.controller('appController',['$scope','$http',
 		refresh();
 
 
-//defines function for the add button 
+//defines function for the add button
 //calls $http.post, to create a post request to /productlist
 //sending $scope.products as the body of the req
 		$scope.createPost = function () {
@@ -69,7 +69,6 @@ myApp.controller('appController',['$scope','$http',
 				$scope.deptlist = response;
 			});
 		};
-
 		deptList();
 
 		var classList = function () {
@@ -79,7 +78,6 @@ myApp.controller('appController',['$scope','$http',
 				$scope.classlist = response;
 			});
 		};
-
 		classList();
 }]);
 
@@ -94,7 +92,6 @@ myApp.controller('browseController',['$scope','$http',
 				$scope.deptlist = response;
 			});
 		};
-
 		deptList();
 
 		var classList = function () {
@@ -104,7 +101,6 @@ myApp.controller('browseController',['$scope','$http',
 				$scope.classlist = response;
 			});
 		};
-
 		classList();
 }]);
 
