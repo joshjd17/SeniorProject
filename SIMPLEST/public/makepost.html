@@ -10,11 +10,18 @@
                     <option>Trade</option>
                 </select>
             </div>
-            <!-- Department -->
+             <!-- Department -->
             <div class="form-group">
-                <!--<label for="department">Select Department:</label>-->
-                <!--<select data-ng-model="department" class="form-control" id="department" ng-options="item._id as item.name for item in departments" placeholder="Department" required></select>-->
+                <label for="department">Department:</label>
+                <input type="text" data-ng-model="post.department" id="department" class="form-control" placeholder="Department" required>
             </div>
+            <!-- Dropdown Format -->
+            <!--
+            <div class="form-group">
+                <label for="postType">Department:</label>
+                <select data-ng-model="post.department" ng-options="dept as dept for dept in deptlist" class="form-control" id="department" required></select>
+            </div>
+            -->
             <!-- Class -->
             <div class="form-group">
                 <!--<label for="class">Select Class:</label>-->

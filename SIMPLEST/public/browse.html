@@ -1,17 +1,18 @@
 <!--browse.html-->
 <h1 align="center">BROWSE</h1>
-<div class="container">
+<div class="container" ng-controller='appController'>
     <!--<form data-ng-submit="browse()" role="form">-->
         <fieldset>
             <!-- Department -->
             <div class="form-group">
                 <label for="department">Select Department:</label>
-                <select data-ng-model="department" class="form-control" id="department" ng-options="item._id as item.name for item in departments" placeholder="Department" required></select>
+                <select ng-click="deptList()" ng-options="dept as dept for dept in deptlist" data-ng-model="department" class="form-control" id="department" \required>
+                </select>
             </div>
             <!-- Class -->
             <div class="form-group">
                 <label for="class">Select Class:</label>
-                <select data-ng-model="class" class="form-control" id="class" ng-options="item._id as item.name for item in classes" placeholder="Class" required></select>
+                <select data-ng-model="class" class="form-control" id="class" required></select>
             </div>
 
             <!-- Submit -->
@@ -23,9 +24,23 @@
             <div class="form-group">
                 <a class="btn btn-default" href="#/browsing">DEBUG Submit</a>
             </div>
+
+            <!-- DEV USE ONLY
+            <div class="form-group">
+                <label class="control-label" for="addDept">Book Author:</label>
+                <div class="controls">
+                    <input type="text" data-ng-model="department" id="addDept" class="form-control" placeholder="Department" required>
+                </div>
+            </div> -->
+            <!-- DEBUG Submit
+            <div class="form-group">
+                <button class="btn btn-primary" ng-click="createDept()">Submit</button>
+            </div>
+            -->
         </fieldset>
     <!--</form>-->
 </div>
+
 
 <!-- Design Notes -->
 <!-- The Department select field should be the only field currently on screen during initialization.
