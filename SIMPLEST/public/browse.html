@@ -1,19 +1,18 @@
 <!--browse.html-->
 <h1 align="center">BROWSE</h1>
-<div class="container" ng-controller='browseController'>
+<div class="container" ng-controller='appController'>
     <!--<form data-ng-submit="browse()" role="form">-->
         <fieldset>
             <!-- Department -->
             <div class="form-group">
                 <label for="department">Select Department:</label>
-                <select ng-click="deptList()" ng-options="department for post in postlist" data-ng-model="department" class="form-control" id="department"  required>
+                <select ng-click="deptList()" ng-options="dept as dept for dept in deptlist" data-ng-model="department" class="form-control" id="department" \required>
                 </select>
-
             </div>
             <!-- Class -->
             <div class="form-group">
                 <label for="class">Select Class:</label>
-                <select data-ng-model="class" class="form-control" id="class"  required></select>
+                <select data-ng-model="class" class="form-control" id="class" required></select>
             </div>
 
             <!-- Submit -->

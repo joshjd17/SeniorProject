@@ -61,21 +61,31 @@ myApp.controller('appController',['$scope','$http',
 				refresh();
 			});
 		};
+
+		var deptList = function () {
+
+			$http.get('/deptlist').success(function (response) {
+				console.log("I got the dept data");
+				$scope.deptlist = response;
+			});
+		};
+
+		deptList();
 }]);
 
 myApp.controller('browseController',['$scope','$http',
 	function($scope,$http) {
 		console.log("hello world from the controller browse");
 
-		$scope.deptList = function () {
+		var deptList = function () {
 
 			$http.get('/deptlist').success(function (response) {
 				console.log("I got the dept data");
-				$scope.postlist = response;
+				$scope.deptlist = response;
 			});
 		};
 
-		//deptList();
+		deptList();
 /*
 		// DEV USE ONLY
 		$scope.createDept = function () {
@@ -87,3 +97,4 @@ myApp.controller('browseController',['$scope','$http',
 		};
 */
 }]);
+
