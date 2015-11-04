@@ -79,6 +79,9 @@ myApp.controller('appController',['$scope','$http',
 			});
 		};
 		classList();
+
+		// Toggle Sell and Trade options
+		$scope.postType = '';
 }]);
 
 myApp.controller('browseController',['$scope','$http',
