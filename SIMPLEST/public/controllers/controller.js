@@ -59,6 +59,7 @@ myApp.controller('appController',['$scope','$http',
 			$http.post('/postlist', $scope.post).success(function (response) {
 				console.log(response);
 				refresh();
+				window.location.replace("#/viewpost");
 			});
 		};
 

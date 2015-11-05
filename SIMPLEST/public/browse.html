@@ -9,13 +9,13 @@
             </div>
             <!-- Class -->
             <div class="form-group">
-                <label for="class">Select Class:</label>
-                <select ng-click="classList()" ng-options="class as class for class in classlist" data-ng-model="class" class="form-control" id="class" required></select>
+                <label for="class" ng-show="department!=null">Select Class:</label>
+                <select ng-options="class as class for class in classlist" data-ng-model="class" class="form-control" id="class" ng-show="department!=null" required></select>
             </div>
 
             <!-- Submit -->
             <div class="form-group">
-                <input type="submit" class="btn btn-default">
+                <input type="submit" class="btn btn-default" ng-show="department && class != null">
             </div>
 
             <!-- DEBUG Submit -->

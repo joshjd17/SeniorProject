@@ -2,6 +2,7 @@
 <h1 align="center">POST</h1>
 <div class="container" ng-controller = 'appController'>
         <fieldset>
+            <form ng-submit="createPost()">
             <!-- Post Type -->
             <div class="form-group">
                 <label for="postType">Post Type:</label>
@@ -13,7 +14,7 @@
              <!-- Department -->
             <div class="form-group">
                 <label for="department">Department:</label>
-                <input type="text" data-ng-model="post.department" id="department" class="form-control" placeholder="Department" required>
+                <input type="text" data-ng-model="post.department" id="department" class="form-control" placeholder="Department Name (Ex: Computer Science)" required>
             </div>
                 <!-- Dropdown Format -->
                 <!--
@@ -25,7 +26,7 @@
             <!-- Class -->
             <div class="form-group">
                 <label for="class">Select Class:</label>
-                <input type="text" data-ng-model="post.class" id="class" class="form-control" placeholder="Class" required>
+                <input type="text" data-ng-model="post.class" id="class" class="form-control" placeholder="Class Name (Ex: Senior Project)" required>
             </div>
                 <!-- Dropdown Format -->
                 <!--
@@ -40,21 +41,21 @@
             <div class="form-group">
                 <label class="control-label" for="title">Book Title:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="post.book.title" id="title" class="form-control" placeholder="Title" required>
+                    <input type="text" data-ng-model="post.book.title" id="title" class="form-control" placeholder="Book's Title (Ex: Objects First with Java)" required>
                 </div>
             </div>
             <!-- Book Author -->
             <div class="form-group">
                 <label class="control-label" for="author">Book Author:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="post.book.author" id="author" class="form-control" placeholder="Author" required>
+                    <input type="text" data-ng-model="post.book.author" id="author" class="form-control" placeholder="Book's Author (Ex: David Barnes, Michael Kolling)" required>
                 </div>
             </div>
             <!-- Book ISBN -->
             <div class="form-group">
                 <label class="control-label" for="isbn">Book ISBN:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="post.book.isbn" id="isbn" class="form-control" placeholder="ISBN:" required>
+                    <input type="text" data-ng-model="post.book.isbn" id="isbn" class="form-control" placeholder="Book's ISBN (Ex: 978-0-1-3249266-9)" required>
                 </div>
             </div>
 
@@ -64,14 +65,14 @@
             <div class="form-group">
                 <label class="control-label" for="name">Contact Name:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="post.contact.name" id="name" class="form-control" placeholder="Name" required>
+                    <input type="text" data-ng-model="post.contact.name" id="name" class="form-control" placeholder="Your Name (Ex: John Doe)" required>
                 </div>
             </div>
             <!-- Contact E-Mail -->
             <div class="form-group">
                 <label class="control-label" for="email">Contact E-Mail:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="post.contact.email" id="email" class="form-control" placeholder="E-Mail" required>
+                    <input type="email" data-ng-model="post.contact.email" id="email" class="form-control" placeholder="Your E-Mail (Ex: john.doe@domain.com)" required>
                 </div>
             </div>
 
@@ -82,7 +83,7 @@
             <div class="form-group" ng-show="post.postType=='Sell'">
                 <label class="control-label" for="price">Asking Price:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="post.sell.price" id="price" class="form-control" placeholder="Price" required>
+                    <input type="number" data-ng-model="post.sell.price" id="price" class="form-control" placeholder="Price (Ex: 55)">
                 </div>
             </div>
 
@@ -92,21 +93,22 @@
             <div class="form-group" ng-show="post.postType=='Trade'">
                 <label class="control-label" for="tradetitle">Book Title:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="post.trade.title" id="tradetitle" class="form-control" placeholder="Title" required>
+                    <input type="text" data-ng-model="post.trade.title" id="tradetitle" class="form-control" placeholder="Book's Title (Ex: Comparitive Programming Languages)">
                 </div>
             </div>
             <!-- Trade Author -->
             <div class="form-group" ng-show="post.postType=='Trade'">
                 <label class="control-label" for="tradeauthor">Book Author:</label>
                 <div class="controls">
-                    <input type="text" data-ng-model="post.trade.author" id="tradeauthor" class="form-control" placeholder="Author" required>
+                    <input type="text" data-ng-model="post.trade.author" id="tradeauthor" class="form-control" placeholder="Book's Author (Ex: Wilson, Clark)">
                 </div>
             </div>
 
             <!-- Submit -->
             <div class="form-group">
-                <button class="btn btn-primary" ng-click="createPost()">Submit</button>
+                <input class="btn submit-btn center" type="submit" value="Submit" align="center">
             </div>
+            </form>
         </fieldset>
 </div>
 
