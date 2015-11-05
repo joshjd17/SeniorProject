@@ -34,6 +34,7 @@ var deptSelect;
 app.post('/deptlist', function(req,res){
 	console.log("this is the req body " + req.body);
 	deptSelect = req.body;
+	res.send();
 });
 
 app.get('/classlist',function(req,res) {

@@ -74,10 +74,11 @@ myApp.controller('appController',['$scope','$http',
 		 $scope.getDept = function(){
 			 $http.post('/deptlist',[$scope.department]).success(function(response){
 				 console.log(response);
+				 classList();
 			 });
 		 };
 
-		 $scope.classList = function () {
+		 var classList = function () {
 			console.log($scope.department);
 			$http.get('/classlist').success(function (response) {
 				console.log("I got the class data: "+ response);
