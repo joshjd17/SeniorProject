@@ -1,5 +1,38 @@
 <!--main.html-->
+<div ng-controller="appController">
 <h1 align="center">RECENT FEED</h1>
+
+<table class="table">
+    <thread>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Price</th>
+            <th>Name</th>
+            <th>Trade for</th>
+            <th>Author</th>
+            <th>Contact</th>
+            <th>View</th>
+        </tr>
+    </thread>
+    <tbody>
+
+    <tr ng-repeat ="post in postlist">
+        <td>{{post.book.title}}</td>
+        <td>{{post.book.author}}</td>
+        <td>{{post.book.isbn}}</td>
+        <td>{{post.sell.price}}</td>
+        <td>{{post.contact.name}}</td>
+        <td>{{post.trade.title}}</td>
+        <td>{{post.trade.author}}</td>
+        <td>{{post.contact.email}}</td>
+        <td><button class="btn btn-default" ng-click="redirect()">View</button></td>
+    </tr>
+
+    </tbody>
+</table>
+</div>
 
 <!-- Design Notes -->
 <!-- This is the main page. It displays the Recent Feed (the latest posts that were added).
