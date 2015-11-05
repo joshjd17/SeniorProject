@@ -1,6 +1,7 @@
 <!--browse.html-->
 <h1 align="center">BROWSE</h1>
-<div class="container" ng-controller='appController'>
+<div form class="container" ng-controller='appController'>
+    <form ng-submit="redirectBrowsing()">
         <fieldset>
             <!-- Department -->
             <div class="form-group">
@@ -17,12 +18,8 @@
             <div class="form-group">
                 <input type="submit" class="btn btn-default" ng-show="department && class != null">
             </div>
-
-            <!-- DEBUG Submit -->
-            <div class="form-group">
-                <a class="btn btn-default" href="#/browsing">DEBUG Submit</a>
-            </div>
         </fieldset>
+    </form>
 </div>
 
 

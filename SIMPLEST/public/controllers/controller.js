@@ -87,9 +87,13 @@ myApp.controller('appController',['$scope','$http',
 			});
 		};
 
-
 		// Toggle Sell and Trade options
 		$scope.postType = '';
+
+		// Redirect to browsing.html from browse.html
+		$scope.redirectBrowsing = function () {
+			window.location.replace("#/browsing");
+		};
 }]);
 
 
