@@ -87,6 +87,12 @@ myApp.controller('appController',['$scope','$http',
 			});
 		};
 
+		$scope.getClass = function() {
+			$http.post('/classlist', [$scope.class]).success(function(response){
+				console.log(response);
+
+			})
+		}
 		/*
 		this method should work once another html page in implemented in the front end
 		this takes a row from the table which is a entire post and using the view button to redirect

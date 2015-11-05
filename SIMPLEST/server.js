@@ -9,7 +9,7 @@ app.use(bodyParser.json({strict: false}));
 
 app.get('/postlist', function(req, res) {
 	console.log("I received a GET request");
-	db.postlist.find(function (err, docs) {
+	db.postlist.find({department: deptSelect}, function (err, docs) {
 		console.log(docs);
 		res.json(docs);
 	});
@@ -45,6 +45,13 @@ app.get('/classlist',function(req,res) {
 		console.log(docs);
 		res.json(docs);
 	});
+});
+var classSelect;
+app.post('/classlist',function(req,res) {
+	console.log("This is the class req body " + req.body);
+	classSelect = req.body;
+	res.send();
+
 });
 
 app.listen(8000);

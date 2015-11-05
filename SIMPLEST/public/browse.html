@@ -11,7 +11,7 @@
             <!-- Class -->
             <div class="form-group">
                 <label for="class" ng-show="department!=null">Select Class:</label>
-                <select ng-options="class as class for class in classlist" data-ng-model="class" class="form-control" id="class" ng-show="department!=null" required></select>
+                <select ng-click="getClass()" ng-options="class as class for class in classlist" data-ng-model="class" class="form-control" id="class" ng-show="department!=null" required></select>
             </div>
 
             <!-- Submit -->
