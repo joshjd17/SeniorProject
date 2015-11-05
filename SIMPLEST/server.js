@@ -9,7 +9,7 @@ app.use(bodyParser.json({strict: false}));
 
 app.get('/postlist', function(req, res) {
 	console.log("I received a GET request");
-	db.postlist.find({department: deptSelect}, function (err, docs) {
+	db.postlist.find({department: deptSelect.toString(), class: classSelect.toString()}, function (err, docs) {
 		console.log(docs);
 		res.json(docs);
 	});

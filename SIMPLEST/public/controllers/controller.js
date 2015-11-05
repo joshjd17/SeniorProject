@@ -39,7 +39,7 @@ myApp.controller('appController',['$scope','$http',
 //changed into a function refresh that can be called to consistantly keep the list updated 
 //on the front end
 
-		var refresh = function () {
+		$scope.classPosts  = function () {
 			$http.get('/postlist').success(function (response) {
 				console.log("I got the data requested");
 				$scope.postlist = response;
@@ -47,7 +47,7 @@ myApp.controller('appController',['$scope','$http',
 			});
 		};
 
-		refresh();
+
 
 
 //defines function for the add button
