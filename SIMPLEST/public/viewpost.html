@@ -1,6 +1,42 @@
 <!--viewpost.html-->
-<h1 align="center">BROWSING</h1>
+<h1 align="center">Veiwing 1 post</h1>
 <p align="center">Post Information Goes Here</p>
+
+<div ng-controller="appController">
+   
+
+    <table class="table">
+        <thread>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Price</th>
+                <th>Name</th>
+                <th>Trade for</th>
+                <th>Author</th>
+                <th>Contact</th>
+                <th>View</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in classlist">
+            <td>{{post.book.title}}</td>
+            <td>{{post.book.author}}</td>
+            <td>{{post.book.isbn}}</td>
+            <td>{{post.sell.price}}</td>
+            <td>{{post.contact.name}}</td>
+            <td>{{post.trade.title}}</td>
+            <td>{{post.trade.author}}</td>
+            <td>{{post.contact.email}}</td>
+            
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
 
 <!-- Design Notes -->
 <!-- This is the viewposts page that the user will access after they provide valid selections

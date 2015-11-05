@@ -16,6 +16,15 @@ app.get('/postlistMain', function(req, res) {
 	});
 });
 
+// For displaying 1 post in the view
+app.get('/viewlist', function(req, res) {
+	console.log("I received a MAIN GET request");
+	db.postlist.find(function (err, docs) {
+		console.log(docs);
+		res.json(docs);
+	});
+});
+
 // For displaying posts in the Browsing partial
 app.get('/postlistClass', function(req, res) {
 	console.log("I received a CLASS GET request");

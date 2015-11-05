@@ -59,6 +59,16 @@ myApp.controller('appController',['$scope','$http',
 			});
 		};
 		classPosts();
+		// For displaying the posts in the view partial
+		var viewedpost = function () {
+			$http.get('/viewlist').success(function (response) {
+				console.log("I got the data requested");
+				$scope.postlist = response;
+				$scope.post = "";
+			});
+		};
+
+		viewedpost();
 
 //defines function for the add button
 //calls $http.post, to create a post request to /productlist
@@ -103,15 +113,15 @@ myApp.controller('appController',['$scope','$http',
 
 			})
 		}
-		/*
-		this method should work once another html page in implemented in the front end
-		this takes a row from the table which is a entire post and using the view button to redirect
-		the row to show just that post on a different page by it self.
+		
+		//this method should work once another html page in implemented in the front end
+		//this takes a row from the table which is a entire post and using the view button to redirect
+	//the row to show just that post on a different page by it self.
 		
 		$scope.redirect = function () {
-			window.location = "#page.html"
-		}
-*/
+			window.location.replace("#/viewpost");
+		};
+
 
 		// Toggle Sell and Trade options
 		$scope.postType = '';
