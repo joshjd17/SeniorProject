@@ -13,6 +13,7 @@
                 <th>Trade for</th>
                 <th>Author</th>
                 <th>Contact</th>
+                <th>View</th>
             </tr>
         </thread>
         <tbody>
@@ -26,6 +27,7 @@
             <td>{{post.trade.title}}</td>
             <td>{{post.trade.author}}</td>
             <td>{{post.contact.email}}</td>
+            <td><button class="btn btn-info" ng-click="redirect()">View</button></td>
         </tr>
 
         </tbody>

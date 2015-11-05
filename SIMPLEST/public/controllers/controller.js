@@ -87,6 +87,16 @@ myApp.controller('appController',['$scope','$http',
 			});
 		};
 
+		/*
+		this method should work once another html page in implemented in the front end
+		this takes a row from the table which is a entire post and using the view button to redirect
+		the row to show just that post on a different page by it self.
+		
+		$scope.redirect = function () {
+			window.location = "#page.html"
+		}
+*/
+
 		// Toggle Sell and Trade options
 		$scope.postType = '';
 
