@@ -7,18 +7,8 @@ var bodyParser = require('body-parser');
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json({strict: false}));
 
-// For displaying posts in the Recent Feed
-app.get('/postlistMain', function(req, res) {
-	console.log("I received a MAIN GET request");
-	db.postlist.find(function (err, docs) {
-		console.log(docs);
-		res.json(docs);
-	});
-});
-
-// For displaying posts in the Browsing partial
-app.get('/postlistClass', function(req, res) {
-	console.log("I received a CLASS GET request");
+app.get('/postlist', function(req, res) {
+	console.log("I received a GET request");
 	db.postlist.find({department: deptSelect.toString(), class: classSelect.toString()}, function (err, docs) {
 		console.log(docs);
 		res.json(docs);
