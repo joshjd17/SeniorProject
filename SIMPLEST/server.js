@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json({strict: false}));
 
-// For displaying posts in the Recent Feed
+// For displaying posts in the Main partial
 app.get('/postlistMain', function(req, res) {
 	console.log("I received a MAIN GET request");
 	db.postlist.find(function (err, docs) {
@@ -26,7 +26,7 @@ app.get('/postlistClass', function(req, res) {
 	});
 });
 
-// For displaying posts in the Browsing partial
+// For displaying a single post in the Viewpost partial
 app.get('/singlePost', function(req, res) {
 	console.log("I received a SINGLE POST GET request");
 	console.log(singlePost + "THOIAFHOA");
@@ -36,6 +36,7 @@ app.get('/singlePost', function(req, res) {
 	});
 });
 
+// For inserting a new post into the database
 app.post('/postlist', function (req, res) {
 	console.log(req.body);
 	db.postlist.insert(req.body, function (err, doc) {
@@ -44,6 +45,7 @@ app.post('/postlist', function (req, res) {
 	});
 });
 
+// For getting the department
 app.get('/deptlist',function(req,res) {
 	console.log("I received a dept GET request");
 	db.postlist.distinct('department', {}, function(err, docs) {
@@ -51,6 +53,8 @@ app.get('/deptlist',function(req,res) {
 		res.json(docs);
 		});
 });
+
+// For setting the department selected into deptSelect
 var deptSelect;
 app.post('/deptlist', function(req,res){
 	console.log("this is the req body " + req.body);
@@ -58,6 +62,7 @@ app.post('/deptlist', function(req,res){
 	res.send();
 });
 
+// For getting the classes within the department
 app.get('/classlist',function(req,res) {
 	console.log("I received a class GET request");
 	console.log("deptSelect = "+deptSelect);
@@ -67,6 +72,8 @@ app.get('/classlist',function(req,res) {
 		res.json(docs);
 	});
 });
+
+// For setting the class selected into classSelect
 var classSelect;
 app.post('/classlist',function(req,res) {
 	console.log("This is the class req body " + req.body);
@@ -75,6 +82,7 @@ app.post('/classlist',function(req,res) {
 
 });
 
+// For getting the post for the specific id
 var singlePost;
 app.post('/singlePost',function(req,res) {
 	console.log("This is the SINGLEPOST req body " + req.body);

@@ -29,15 +29,15 @@ myApp.config(function($routeProvider){
 		})
 });
 
-//$scope used to interact with front end views
-//$http used for routing(get and post)
+// $scope used to interact with front end views
+// $http used for routing(get and post)
 myApp.controller('appController',['$scope','$http', 
 	function($scope,$http) {
 		console.log("hello world from the controller");
 
-//on a successful get request to /productlist, print the productlist to the console
-//changed into a function refresh that can be called to consistantly keep the list updated 
-//on the front end
+// on a successful get request to /productlist, print the productlist to the console
+// changed into a function refresh that can be called to consistantly keep the list updated
+// on the front end
 
 		// For displaying the posts in the main.html partial
 		var recentFeed = function () {
