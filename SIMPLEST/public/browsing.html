@@ -1,6 +1,8 @@
 <!--browsing.html-->
+<h1 align="center">BROWSING</h1>
 <div ng-controller="appController">
-    <h1 align="center">BROWSING</h1>
+    <form ng-submit="redirect()">
+  
 
     <table class="table">
         <thread>
@@ -18,7 +20,7 @@
         </thread>
         <tbody>
 
-        <tr ng-repeat ="post in classlist">
+        <tr ng-repeat ="post in postlist">
             <td>{{post.book.title}}</td>
             <td>{{post.book.author}}</td>
             <td>{{post.book.isbn}}</td>
@@ -27,11 +29,15 @@
             <td>{{post.trade.title}}</td>
             <td>{{post.trade.author}}</td>
             <td>{{post.contact.email}}</td>
-            <td><button class="btn btn-default" ng-click="redirect()">View</button></td>
-        </tr>
+            <td><!-- Submit -->
+            <div class="form-group">
+                <input ng-click = "viewedpost()" type="submit" class="btn btn-default">
+            </div></td>
+         </tr>
 
         </tbody>
     </table>
+</form>
 </div>
 <!-- Design Notes -->
 <!-- This is the browsing page that the user will access after they provide valid selections

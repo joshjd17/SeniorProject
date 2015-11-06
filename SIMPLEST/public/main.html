@@ -1,37 +1,45 @@
 <!--main.html-->
-<div ng-controller="appController">
+
 <h1 align="center">RECENT FEED</h1>
 
-<table class="table">
-    <thread>
-        <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>ISBN</th>
-            <th>Price</th>
-            <th>Name</th>
-            <th>Trade for</th>
-            <th>Author</th>
-            <th>Contact</th>
-            <th>View</th>
-        </tr>
-    </thread>
-    <tbody>
+<div ng-controller="appController">
+    <form ng-submit="redirect()">
+  
 
-    <tr ng-repeat ="post in postlist">
-        <td>{{post.book.title}}</td>
-        <td>{{post.book.author}}</td>
-        <td>{{post.book.isbn}}</td>
-        <td>{{post.sell.price}}</td>
-        <td>{{post.contact.name}}</td>
-        <td>{{post.trade.title}}</td>
-        <td>{{post.trade.author}}</td>
-        <td>{{post.contact.email}}</td>
-        <td><button class="btn btn-default" ng-click="redirect()">View</button></td>
-    </tr>
+    <table class="table">
+        <thread>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Price</th>
+                <th>Name</th>
+                <th>Trade for</th>
+                <th>Author</th>
+                <th>Contact</th>
+                <th>View</th>
+            </tr>
+        </thread>
+        <tbody>
 
-    </tbody>
-</table>
+        <tr ng-repeat ="post in postlist">
+            <td>{{post.book.title}}</td>
+            <td>{{post.book.author}}</td>
+            <td>{{post.book.isbn}}</td>
+            <td>{{post.sell.price}}</td>
+            <td>{{post.contact.name}}</td>
+            <td>{{post.trade.title}}</td>
+            <td>{{post.trade.author}}</td>
+            <td>{{post.contact.email}}</td>
+            <td><!-- Submit -->
+            <div class="form-group">
+                <input ng-click = "viewedpost()" type="submit" class="btn btn-default">
+            </div></td>
+         </tr>
+
+        </tbody>
+    </table>
+</form>
 </div>
 
 <!-- Design Notes -->
