@@ -1,37 +1,45 @@
 <!--viewpost.html-->
 <div ng-controller="browseController">
     <h1 align="center">BROWSING</h1>
+    <!-- Will be in a more presentable format -->
     <table class="table">
         <thread>
             <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Author</th>
-                <th>ISBN</th>
+                <th>Department</th>
+                <th>Class</th>
+                <th>Book Title</th>
+                <th>Book Author</th>
+                <th>Book ISBN</th>
+                <th>Post Type</th>
                 <th>Price</th>
-                <th>Name</th>
-                <th>Trade for</th>
-                <th>Author</th>
+                <th>Book Trade Title</th>
+                <th>Book Trade Author</th>
+                <th>Contact Name</th>
+                <th>Contact E-Mail</th>
                 <th>Contact</th>
             </tr>
         </thread>
         <tbody>
 
-        <tr ng-repeat ="post in singleposts">
-            <td>{{post._id}}</td>
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.department}}</td>
+            <td>{{post.class}}</td>
             <td>{{post.book.title}}</td>
             <td>{{post.book.author}}</td>
             <td>{{post.book.isbn}}</td>
+            <td>{{post.postType}}</td>
             <td>{{post.sell.price}}</td>
-            <td>{{post.contact.name}}</td>
             <td>{{post.trade.title}}</td>
             <td>{{post.trade.author}}</td>
+            <td>{{post.contact.name}}</td>
             <td>{{post.contact.email}}</td>
+            <td><button class="btn btn-default" ng-click="getSinglePost(post._id)">View</button></td>
         </tr>
 
         </tbody>
     </table>
 </div>
+
 <!-- Design Notes -->
 <!-- This is the viewposts page that the user will access after they provide valid selections
      for the (makepost.html) page. It displays the specific post information that the user
@@ -42,4 +50,17 @@
         - Accessed after providing valid information to (makepost.html)
         - Accessed after clicking on an available post in the (browsing.html)
         - Displays the specific post information that was stored in the database upon creation
+
+            Other Options:
+
+            <td>{{post._id}}</td>
+            <td>{{post.postType}}</td>
+            <td>{{post.book.title}}</td>
+            <td>{{post.book.author}}</td>
+            <td>{{post.book.isbn}}</td>
+            <td>{{post.sell.price}}</td>
+            <td>{{post.contact.name}}</td>
+            <td>{{post.trade.title}}</td>
+            <td>{{post.trade.author}}</td>
+            <td>{{post.contact.email}}</td>
 -->
