@@ -128,7 +128,7 @@ myApp.controller('appController',['$scope','$http',
 		var singlePost  = function () {
 			$http.get('/singlePost').success(function (response) {
 				console.log("I got the data requested NEW SINGLE POST");
-				$scope.singleposts = response;
+				$scope.singlepostview = response;
 				$scope.post = "";
 			});
 		};
@@ -163,7 +163,7 @@ myApp.controller('browseController',['$scope','$http',
 		var singlePost  = function () {
 			$http.get('/singlePost').success(function (response) {
 				console.log("I got the data requested NEW SINGLE POST");
-				$scope.singleposts = response;
+				$scope.singlepostview = response;
 				$scope.post = "";
 			});
 		};

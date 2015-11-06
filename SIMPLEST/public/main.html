@@ -5,28 +5,25 @@
 <table class="table">
     <thread>
         <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>ISBN</th>
-            <th>Price</th>
-            <th>Name</th>
-            <th>Trade for</th>
-            <th>Author</th>
-            <th>Contact</th>
+            <th>Department</th>
+            <th>Class</th>
+            <th>Book Title</th>
+            <th>Book Author</th>
+            <th>Book ISBN</th>
+            <th>Post Type</th>
             <th>View</th>
         </tr>
     </thread>
     <tbody>
 
     <tr ng-repeat ="post in postlist">
+        <td>{{post.department}}</td>
+        <td>{{post.class}}</td>
         <td>{{post.book.title}}</td>
         <td>{{post.book.author}}</td>
         <td>{{post.book.isbn}}</td>
-        <td>{{post.sell.price}}</td>
-        <td>{{post.contact.name}}</td>
-        <td>{{post.trade.title}}</td>
-        <td>{{post.trade.author}}</td>
-        <td>{{post.contact.email}}</td>
+        <td>{{post.postType}}</td>
+
         <td><button class="btn btn-default" ng-click="getSinglePost(post._id)">View</button></td>
     </tr>
 
@@ -40,4 +37,17 @@
      Key Points:
         - Main html page accessible by the BOOK BODEGA button on the navbar
         - Displays the latest posts, populated by calling the database
+
+        Other Options:
+
+            <td>{{post._id}}</td>
+            <td>{{post.postType}}</td>
+            <td>{{post.book.title}}</td>
+            <td>{{post.book.author}}</td>
+            <td>{{post.book.isbn}}</td>
+            <td>{{post.sell.price}}</td>
+            <td>{{post.contact.name}}</td>
+            <td>{{post.trade.title}}</td>
+            <td>{{post.trade.author}}</td>
+            <td>{{post.contact.email}}</td>
 -->
