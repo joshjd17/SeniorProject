@@ -39,17 +39,16 @@ myApp.controller('appController',['$scope','$http',
 //changed into a function refresh that can be called to consistantly keep the list updated 
 //on the front end
 
-		// For displaying the posts in the main.html partial
-		var recentFeed = function () {
-			$http.get('/postlistMain').success(function (response) {
+		$scope.classPosts  = function () {
+			$http.get('/postlist').success(function (response) {
 				console.log("I got the data requested");
 				$scope.postlist = response;
 				$scope.post = "";
 			});
 		};
 
-		recentFeed();
 
+<<<<<<< HEAD
 		// For displaying the posts in browsing.html partial
 		var classPosts  = function () {
 			$http.get('/postlistClass').success(function (response) {
@@ -69,6 +68,9 @@ myApp.controller('appController',['$scope','$http',
 		};
 
 		viewedpost();
+=======
+
+>>>>>>> origin/page-redireting-for-post
 
 //defines function for the add button
 //calls $http.post, to create a post request to /productlist
@@ -78,7 +80,7 @@ myApp.controller('appController',['$scope','$http',
 
 			$http.post('/postlist', $scope.post).success(function (response) {
 				console.log(response);
-				//blah();
+				refresh();
 				window.location.replace("#/viewpost");
 			});
 		};
