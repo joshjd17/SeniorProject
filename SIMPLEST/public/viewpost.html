@@ -15,7 +15,6 @@
                 <th>Book Trade Title</th>
                 <th>Book Trade Author</th>
                 <th>Contact Name</th>
-                <th>Contact E-Mail</th>
                 <th>Contact</th>
             </tr>
         </thread>
@@ -32,8 +31,7 @@
             <td>{{post.trade.title}}</td>
             <td>{{post.trade.author}}</td>
             <td>{{post.contact.name}}</td>
-            <td>{{post.contact.email}}</td>
-            <td><button class="btn btn-default" ng-click="getSinglePost(post._id)">View</button></td>
+            <td><a ng-href = "mailto:{{post.contact.email}}">contact</a></td>
         </tr>
 
         </tbody>
