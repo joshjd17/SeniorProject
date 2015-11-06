@@ -55,6 +55,7 @@
         </tr>
 
         </tbody>
+
         <thread>
             <tr>
                 <th>Book ISBN</th>
@@ -64,6 +65,17 @@
 
         <tr ng-repeat ="post in singlepostview">
             <td>{{post.book.isbn}}</td>
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
+                <th>Book Condition</th>
+            </tr>
+        </thread>
+        <tbody>
+            <tr ng-repeat ="post in singlepostview">
+            <td>{{post.book.condition}}</td>
         </tr>
 
         </tbody>
@@ -93,18 +105,7 @@
 
         </tbody>
     
-        <thread>
-            <tr>
-                <th>Book Trade Title</th>
-            </tr>
-        </thread>
-        <tbody>
-
-        <tr ng-repeat ="post in singlepostview">
-            <td>{{post.trade.title}}</td>
-        </tr>
-
-        </tbody>
+        
         <thread>
             <tr>
                 <th>Book Trade Title</th>
