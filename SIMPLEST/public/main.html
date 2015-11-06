@@ -17,7 +17,7 @@
     
     <tbody>
 
-    <tr ng-repeat ="post in postlist">
+    <tr ng-repeat ="post in postlist | filter:searchText">
         <td>{{post.department | uppercase}}</td>
         <td>{{post.class}}</td>
         <td>{{post.book.title}}</td>
