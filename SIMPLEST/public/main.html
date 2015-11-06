@@ -2,7 +2,7 @@
 <div ng-controller="appController">
 <h1 align="center">RECENT FEED</h1>
 
-<table class="table">
+<table st-table ="postlist" class="table table-striped">
     <thread>
         <tr>
             <th>Department</th>
@@ -14,17 +14,20 @@
             <th>View</th>
         </tr>
     </thread>
+    
     <tbody>
 
     <tr ng-repeat ="post in postlist">
-        <td>{{post.department}}</td>
+        <td>{{post.department | uppercase}}</td>
         <td>{{post.class}}</td>
         <td>{{post.book.title}}</td>
         <td>{{post.book.author}}</td>
         <td>{{post.book.isbn}}</td>
-        <td>{{post.postType}}</td>
+        <td>{{post.postType | uppercase}}</td>
 
         <td><button class="btn btn-default" ng-click="getSinglePost(post._id)">View</button></td>
+
+        
     </tr>
 
     </tbody>
