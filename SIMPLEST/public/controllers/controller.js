@@ -48,7 +48,7 @@ myApp.controller('appController',['$scope','$http',
 		};
 
 
-<<<<<<< HEAD
+
 		// For displaying the posts in browsing.html partial
 		var classPosts  = function () {
 			$http.get('/postlistClass').success(function (response) {
@@ -68,9 +68,7 @@ myApp.controller('appController',['$scope','$http',
 		};
 
 		viewedpost();
-=======
 
->>>>>>> origin/page-redireting-for-post
 
 //defines function for the add button
 //calls $http.post, to create a post request to /productlist
