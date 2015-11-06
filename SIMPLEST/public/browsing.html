@@ -16,7 +16,7 @@
         </thread>
         <tbody>
 
-        <tr ng-repeat ="post in classlist">
+        <tr ng-repeat ="post in classlist | filter:searchText">
             <td>{{post.department | uppercase}}</td>
             <td>{{post.class}}</td>
             <td>{{post.book.title}}</td>
