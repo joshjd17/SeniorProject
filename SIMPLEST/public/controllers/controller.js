@@ -39,16 +39,28 @@ myApp.controller('appController',['$scope','$http',
 //changed into a function refresh that can be called to consistantly keep the list updated 
 //on the front end
 
-		var refresh = function () {
-			$http.get('/postlist').success(function (response) {
+		// For displaying the posts in the main.html partial
+		var recentFeed = function () {
+			$http.get('/postlistMain').success(function (response) {
 				console.log("I got the data requested");
 				$scope.postlist = response;
 				$scope.post = "";
 			});
 		};
 
-		refresh();
+		recentFeed();
 
+		/*
+		// For displaying the posts in browsing.html partial
+		$scope.classPosts  = function () {
+			$http.get('/postlistClass').success(function (response) {
+				console.log("I got the data requested NEW");
+				$scope.classlist = response;
+				$scope.post = "";
+			});
+		};
+		//classPosts();
+		*/
 
 //defines function for the add button
 //calls $http.post, to create a post request to /productlist
@@ -58,7 +70,7 @@ myApp.controller('appController',['$scope','$http',
 
 			$http.post('/postlist', $scope.post).success(function (response) {
 				console.log(response);
-				refresh();
+				//blah();
 				window.location.replace("#/viewpost");
 			});
 		};
@@ -87,6 +99,23 @@ myApp.controller('appController',['$scope','$http',
 			});
 		};
 
+		$scope.getClass = function() {
+			$http.post('/classlist', [$scope.class]).success(function(response){
+				console.log(response);
+
+			})
+		}
+		/*
+		this method should work once another html page in implemented in the front end
+		this takes a row from the table which is a entire post and using the view button to redirect
+		the row to show just that post on a different page by it self.
+
+		$scope.redirect = function () {
+			window.location.replace("#/viewpost");
+		}
+		*/
+
+
 		// Toggle Sell and Trade options
 		$scope.postType = '';
 
@@ -94,7 +123,58 @@ myApp.controller('appController',['$scope','$http',
 		$scope.redirectBrowsing = function () {
 			window.location.replace("#/browsing");
 		};
+
+		// For displaying the posts in browsing.html partial
+		var singlePost  = function () {
+			$http.get('/singlePost').success(function (response) {
+				console.log("I got the data requested NEW SINGLE POST");
+				$scope.singleposts = response;
+				$scope.post = "";
+			});
+		};
+		singlePost();
+
+		$scope.getSinglePost = function(postid) {
+			console.log(postid);
+			$http.post('/singlePost', [postid]).success(function(response){
+				console.log(response);
+				singlePost();
+				window.location.replace("#/viewpost");
+			})
+		}
 }]);
 
+// Controller for browsing.html posts
+myApp.controller('browseController',['$scope','$http',
+	function($scope,$http) {
+		console.log("hello world from the controller");
 
+		// For displaying the posts in browsing.html partial
+		var classPosts  = function () {
+			$http.get('/postlistClass').success(function (response) {
+				console.log("I got the data requested NEW");
+				$scope.classlist = response;
+				$scope.post = "";
+			});
+		};
+		classPosts();
 
+		// For displaying the posts in browsing.html partial
+		var singlePost  = function () {
+			$http.get('/singlePost').success(function (response) {
+				console.log("I got the data requested NEW SINGLE POST");
+				$scope.singleposts = response;
+				$scope.post = "";
+			});
+		};
+		singlePost();
+
+		$scope.getSinglePost = function(postid) {
+			console.log(postid);
+			$http.post('/singlePost', [postid]).success(function(response){
+				console.log(response);
+				singlePost();
+				window.location.replace("#/viewpost");
+			})
+		}
+}]);
