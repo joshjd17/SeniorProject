@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
+var ObjectID = require('mongojs').ObjectId;
 var db = mongojs('bbApp',['postlist','deptlist']);
 var bodyParser = require('body-parser');
 
@@ -18,8 +19,18 @@ app.get('/postlistMain', function(req, res) {
 
 // For displaying posts in the Browsing partial
 app.get('/postlistClass', function(req, res) {
-	console.log("I received a CLASS GET request");
+	console.log("I received a CLASS GET request" + deptSelect + "@%(@*&)(%@%AFOIHFOIAFH");
 	db.postlist.find({department: deptSelect.toString(), class: classSelect.toString()}, function (err, docs) {
+		console.log(docs);
+		res.json(docs);
+	});
+});
+
+// For displaying posts in the Browsing partial
+app.get('/singlePost', function(req, res) {
+	console.log("I received a SINGLE POST GET request");
+	console.log(singlePost + "THOIAFHOA");
+	db.postlist.find({_id: new ObjectID(singlePost.toString())}, function (err, docs) {
 		console.log(docs);
 		res.json(docs);
 	});
@@ -60,6 +71,14 @@ var classSelect;
 app.post('/classlist',function(req,res) {
 	console.log("This is the class req body " + req.body);
 	classSelect = req.body;
+	res.send();
+
+});
+
+var singlePost;
+app.post('/singlePost',function(req,res) {
+	console.log("This is the SINGLEPOST req body " + req.body);
+	singlePost = req.body;
 	res.send();
 
 });

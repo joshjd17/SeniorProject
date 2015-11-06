@@ -109,11 +109,12 @@ myApp.controller('appController',['$scope','$http',
 		this method should work once another html page in implemented in the front end
 		this takes a row from the table which is a entire post and using the view button to redirect
 		the row to show just that post on a different page by it self.
-		
+
 		$scope.redirect = function () {
-			window.location = "#page.html"
+			window.location.replace("#/viewpost");
 		}
-*/
+		*/
+
 
 		// Toggle Sell and Trade options
 		$scope.postType = '';
@@ -122,9 +123,28 @@ myApp.controller('appController',['$scope','$http',
 		$scope.redirectBrowsing = function () {
 			window.location.replace("#/browsing");
 		};
+
+		// For displaying the posts in browsing.html partial
+		var singlePost  = function () {
+			$http.get('/singlePost').success(function (response) {
+				console.log("I got the data requested NEW SINGLE POST");
+				$scope.singleposts = response;
+				$scope.post = "";
+			});
+		};
+		singlePost();
+
+		$scope.getSinglePost = function(postid) {
+			console.log(postid);
+			$http.post('/singlePost', [postid]).success(function(response){
+				console.log(response);
+				singlePost();
+				window.location.replace("#/viewpost");
+			})
+		}
 }]);
 
-// Controller for browse.html posts
+// Controller for browsing.html posts
 myApp.controller('browseController',['$scope','$http',
 	function($scope,$http) {
 		console.log("hello world from the controller");
@@ -138,4 +158,23 @@ myApp.controller('browseController',['$scope','$http',
 			});
 		};
 		classPosts();
+
+		// For displaying the posts in browsing.html partial
+		var singlePost  = function () {
+			$http.get('/singlePost').success(function (response) {
+				console.log("I got the data requested NEW SINGLE POST");
+				$scope.singleposts = response;
+				$scope.post = "";
+			});
+		};
+		singlePost();
+
+		$scope.getSinglePost = function(postid) {
+			console.log(postid);
+			$http.post('/singlePost', [postid]).success(function(response){
+				console.log(response);
+				singlePost();
+				window.location.replace("#/viewpost");
+			})
+		}
 }]);
