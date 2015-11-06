@@ -1,8 +1,15 @@
 <!--main.html-->
 <div ng-controller="appController">
 <h1 align="center">RECENT FEED</h1>
+<div align= "center"<form class="navbar-form navbar-center" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="searchText" placeholder="Search for Book">
+                </div>
+               
+            </form>
+</div>
 
-<table class="table">
+<table st-table ="postlist" class="table table-striped">
     <thread>
         <tr>
             <th>Department</th>
@@ -14,17 +21,20 @@
             <th>View</th>
         </tr>
     </thread>
+    
     <tbody>
 
-    <tr ng-repeat ="post in postlist">
-        <td>{{post.department}}</td>
+    <tr ng-repeat ="post in postlist | filter:searchText">
+        <td>{{post.department | uppercase}}</td>
         <td>{{post.class}}</td>
         <td>{{post.book.title}}</td>
         <td>{{post.book.author}}</td>
         <td>{{post.book.isbn}}</td>
-        <td>{{post.postType}}</td>
+        <td>{{post.postType | uppercase}}</td>
 
         <td><button class="btn btn-default" ng-click="getSinglePost(post._id)">View</button></td>
+
+        
     </tr>
 
     </tbody>

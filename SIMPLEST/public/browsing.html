@@ -1,8 +1,15 @@
 <!--browsing.html-->
 <div ng-controller="browseController">
     <h1 align="center">BROWSING</h1>
+    <div align= "center"<form class="navbar-form navbar-center" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="searchText" placeholder="Search for Book">
+                </div>
+               
+            </form>
+</div>
 
-    <table class="table">
+    <table st-table ="postlist" class="table table-striped">
         <thread>
             <tr>
                 <th>Department</th>
@@ -16,13 +23,13 @@
         </thread>
         <tbody>
 
-        <tr ng-repeat ="post in classlist">
-            <td>{{post.department}}</td>
+        <tr ng-repeat ="post in classlist | filter:searchText">
+            <td>{{post.department | uppercase}}</td>
             <td>{{post.class}}</td>
             <td>{{post.book.title}}</td>
             <td>{{post.book.author}}</td>
             <td>{{post.book.isbn}}</td>
-            <td>{{post.postType}}</td>
+            <td>{{post.postType | uppercase}}</td>
             <td><button class="btn btn-default" ng-click="getSinglePost(post._id)">View</button></td>
         </tr>
 
@@ -33,9 +40,11 @@
 <!-- This is the browsing page that the user will access after they provide valid selections
      for the browse page (browse.html). It displays the posts that are found that contain the
      specified criteria based on the selections provided by the user.
+     This page will also redirect to a viewpost.html page when a user clicks on the View button for any of the single post.
 
      Key Points:
         - Accessed after providing valid information to (browse.html)
         - Displays the posts that match the criteria of the provided information
         - If no posts are found, it's either left blank or a "No Posts Found" will be displayed
+        - Redirected 
 -->

@@ -169,6 +169,8 @@ myApp.controller('browseController',['$scope','$http',
 		};
 		singlePost();
 
+		
+
 		$scope.getSinglePost = function(postid) {
 			console.log(postid);
 			$http.post('/singlePost', [postid]).success(function(response){
