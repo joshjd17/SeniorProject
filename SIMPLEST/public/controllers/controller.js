@@ -50,15 +50,17 @@ myApp.controller('appController',['$scope','$http',
 
 		recentFeed();
 
+		/*
 		// For displaying the posts in browsing.html partial
-		var classPosts  = function () {
+		$scope.classPosts  = function () {
 			$http.get('/postlistClass').success(function (response) {
 				console.log("I got the data requested NEW");
 				$scope.classlist = response;
 				$scope.post = "";
 			});
 		};
-		classPosts();
+		//classPosts();
+		*/
 
 //defines function for the add button
 //calls $http.post, to create a post request to /productlist
@@ -122,5 +124,18 @@ myApp.controller('appController',['$scope','$http',
 		};
 }]);
 
+// Controller for browse.html posts
+myApp.controller('browseController',['$scope','$http',
+	function($scope,$http) {
+		console.log("hello world from the controller");
 
-
+		// For displaying the posts in browsing.html partial
+		var classPosts  = function () {
+			$http.get('/postlistClass').success(function (response) {
+				console.log("I got the data requested NEW");
+				$scope.classlist = response;
+				$scope.post = "";
+			});
+		};
+		classPosts();
+}]);
