@@ -2,36 +2,159 @@
 <div ng-controller="browseController">
     <h1 align="center">BROWSING</h1>
     <!-- Will be in a more presentable format -->
-    <table class="table">
+
+
+   <table st-table ="postlist" class="table table-striped">
         <thread>
             <tr>
                 <th>Department</th>
+               
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.department | uppercase}}</td>
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
+
                 <th>Class</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.class}}</td>
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
                 <th>Book Title</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.book.title}}</td>
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
                 <th>Book Author</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.book.author}}</td>
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
                 <th>Book ISBN</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.book.isbn}}</td>
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
                 <th>Post Type</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.postType | uppercase}}</td>
+            
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
                 <th>Price</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.sell.price | currency}}</td>
+        </tr>
+
+        </tbody>
+    
+        <thread>
+            <tr>
                 <th>Book Trade Title</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.trade.title}}</td>
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
+                <th>Book Trade Title</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.trade.title}}</td>
+        </tr>
+
+        </tbody>
+
+        <thread>
+            <tr>
                 <th>Book Trade Author</th>
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            <td>{{post.trade.author}}</td>
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
+               
                 <th>Contact Name</th>
+                
+            </tr>
+        </thread>
+        <tbody>
+
+        <tr ng-repeat ="post in singlepostview">
+            
+            <td>{{post.contact.name}}</td>
+            
+        </tr>
+
+        </tbody>
+        <thread>
+            <tr>
                 <th>Contact</th>
             </tr>
         </thread>
         <tbody>
 
         <tr ng-repeat ="post in singlepostview">
-            <td>{{post.department}}</td>
-            <td>{{post.class}}</td>
-            <td>{{post.book.title}}</td>
-            <td>{{post.book.author}}</td>
-            <td>{{post.book.isbn}}</td>
-            <td>{{post.postType}}</td>
-            <td>{{post.sell.price | currency}}</td>
-            <td>{{post.trade.title}}</td>
-            <td>{{post.trade.author}}</td>
-            <td>{{post.contact.name}}</td>
-            <td><a ng-href = "mailto:{{post.contact.email}}">contact</a></td>
+            <td><a ng-href = "mailto:{{post.contact.email}}">Email Seller</a></td>
         </tr>
 
         </tbody>
