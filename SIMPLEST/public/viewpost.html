@@ -1,5 +1,5 @@
 <!--viewpost.html-->
-<div ng-controller="browseController">
+<div ng-controller="appController">
    
     <!-- Will be in a more presentable format -->
 
@@ -8,11 +8,9 @@
         <thread>
             <tr>
                 <th>Department</th>
-               
             </tr>
         </thread>
         <tbody>
-
         <tr ng-repeat ="post in singlepostview">
             <td>{{post.department | uppercase}}</td>
         </tr>
@@ -155,7 +153,9 @@
         <tbody>
 
         <tr ng-repeat ="post in singlepostview">
-            <td><a ng-href = "mailto:{{post.contact.email}}">Email Seller</a></td>
+            <!--<td><a ng-href = "mailto:{{post.contact.email}}">Email Seller</a></td>-->
+            <!--<td><button class="btn btn-default" ng-click="emailAndRemove(post._id)">Contact Seller</button></td>-->
+            <td><button class="btn btn-default" ng-click="emailAndRemoveTest(post._id)">Contact Seller</button></td>
         </tr>
 
         </tbody>

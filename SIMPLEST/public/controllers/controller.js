@@ -33,7 +33,7 @@ myApp.config(function($routeProvider){
 // $http used for routing(get and post)
 myApp.controller('appController',['$scope','$http', 
 	function($scope,$http) {
-		console.log("hello world from the controller");
+		console.log("Hello world from the controller - controller.js");
 
 // on a successful get request to /productlist, print the productlist to the console
 // changed into a function refresh that can be called to consistantly keep the list updated
@@ -42,25 +42,13 @@ myApp.controller('appController',['$scope','$http',
 		// For displaying the posts in the main.html partial
 		var recentFeed = function () {
 			$http.get('/postlistMain').success(function (response) {
-				console.log("I got the data requested");
+				console.log("I got the data requested" + "recentfeed().get - controller.js");
 				$scope.postlist = response;
 				$scope.post = "";
 			});
 		};
 
 		recentFeed();
-
-		/*
-		// For displaying the posts in browsing.html partial
-		$scope.classPosts  = function () {
-			$http.get('/postlistClass').success(function (response) {
-				console.log("I got the data requested NEW");
-				$scope.classlist = response;
-				$scope.post = "";
-			});
-		};
-		//classPosts();
-		*/
 
 //defines function for the add button
 //calls $http.post, to create a post request to /productlist
@@ -69,16 +57,16 @@ myApp.controller('appController',['$scope','$http',
 			console.log($scope.post);
 
 			$http.post('/postlist', $scope.post).success(function (response) {
-				console.log(response);
-				//blah();
-				window.location.replace("#/viewpost");
+				console.log(response + "createPost.post() - controller.js" + $scope.post);
+				//getSinglePost($scope.post._id);
+				//window.location.replace("#/viewpost");
 			});
 		};
 
 		var deptList = function () {
 
 			$http.get('/deptlist').success(function (response) {
-				console.log("I got the dept data");
+				console.log("I got the dept data - deptList.get() - controller.js");
 				$scope.deptlist = response;
 			});
 		};
@@ -86,7 +74,7 @@ myApp.controller('appController',['$scope','$http',
 
 		 $scope.getDept = function(){
 			 $http.post('/deptlist',[$scope.department]).success(function(response){
-				 console.log(response);
+				 console.log(response + "getDept.post() - controller.js");
 				 classList();
 			 });
 		 };
@@ -94,15 +82,14 @@ myApp.controller('appController',['$scope','$http',
 		 var classList = function () {
 			console.log($scope.department);
 			$http.get('/classlist').success(function (response) {
-				console.log("I got the class data: "+ response);
+				console.log("I got the class data: "+ response + "classList.get() - controller.js");
 				$scope.classlist = response;
 			});
 		};
 
 		$scope.getClass = function() {
 			$http.post('/classlist', [$scope.class]).success(function(response){
-				console.log(response);
-
+				console.log(response + "getClass.post() - controller.js");
 			})
 		}
 		/*
@@ -116,43 +103,15 @@ myApp.controller('appController',['$scope','$http',
 		*/
 
 
-		// Toggle Sell and Trade options
-		$scope.postType = '';
-
 		// Redirect to browsing.html from browse.html
 		$scope.redirectBrowsing = function () {
 			window.location.replace("#/browsing");
 		};
 
 		// For displaying the posts in browsing.html partial
-		var singlePost  = function () {
-			$http.get('/singlePost').success(function (response) {
-				console.log("I got the data requested NEW SINGLE POST");
-				$scope.singlepostview = response;
-				$scope.post = "";
-			});
-		};
-		singlePost();
-
-		$scope.getSinglePost = function(postid) {
-			console.log(postid);
-			$http.post('/singlePost', [postid]).success(function(response){
-				console.log(response);
-				singlePost();
-				window.location.replace("#/viewpost");
-			})
-		}
-}]);
-
-// Controller for browsing.html posts
-myApp.controller('browseController',['$scope','$http',
-	function($scope,$http) {
-		console.log("hello world from the controller");
-
-		// For displaying the posts in browsing.html partial
 		var classPosts  = function () {
 			$http.get('/postlistClass').success(function (response) {
-				console.log("I got the data requested NEW");
+				console.log("I got the data requested - classPosts.get() - browseController - controller.js");
 				$scope.classlist = response;
 				$scope.post = "";
 			});
@@ -162,21 +121,70 @@ myApp.controller('browseController',['$scope','$http',
 		// For displaying the posts in browsing.html partial
 		var singlePost  = function () {
 			$http.get('/singlePost').success(function (response) {
-				console.log("I got the data requested NEW SINGLE POST");
+				console.log("singlePost.get() - controller.js");
 				$scope.singlepostview = response;
 				$scope.post = "";
 			});
 		};
 		singlePost();
 
-		
+		 $scope.getSinglePost = function(postid) {
+			console.log(postid);
+			$http.post('/singlePost', [postid]).success(function(response){
+				console.log(response + "getSinglePost.post() - controller.js");
+				singlePost();
+				window.location.replace("#/viewpost");
+			})
+		}
+
+		$scope.emailAndRemove = function(postid) {
+			console.log("REMOVING " + postid);
+			$http.post('/emailAndRemove', [postid]).success(function(response){
+				console.log(response + "emailAndRemove.post() - controller.js");
+				window.location.replace("#/main");
+			})
+		}
+
+		$scope.emailAndRemove = function(postid) {
+			window.location.href = "mailto:address@dmail.com";
+		}
+
+
+}]);
+
+/* Shouldn't be necessary anymore
+// Controller for browsing.html posts
+myApp.controller('browseController',['$scope','$http',
+	function($scope,$http) {
+		console.log("Hello world from the BROWSE controller");
+
+		// For displaying the posts in browsing.html partial
+		var classPosts  = function () {
+			$http.get('/postlistClass').success(function (response) {
+				console.log("I got the data requested - classPosts.get() - browseController - controller.js");
+				$scope.classlist = response;
+				$scope.post = "";
+			});
+		};
+		classPosts();
+
+		// For displaying the posts in browsing.html partial
+		var singlePost  = function () {
+			$http.get('/singlePost').success(function (response) {
+				console.log("I got the data requested - singlePost.get() - browseController - controller.js");
+				$scope.singlepostview = response;
+				$scope.post = "";
+			});
+		};
+		singlePost();
 
 		$scope.getSinglePost = function(postid) {
 			console.log(postid);
 			$http.post('/singlePost', [postid]).success(function(response){
-				console.log(response);
+				console.log(response + "getSinglePost.post() - browseController - controller.js");
 				singlePost();
 				window.location.replace("#/viewpost");
 			})
 		}
 }]);
+*/
