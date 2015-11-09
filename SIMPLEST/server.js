@@ -96,7 +96,7 @@ app.post('/classlist',function(req,res) {
 });
 
 // For getting the post for the specific id
-var singlePost = "xxxxxxxxxxxxxxxxxxxxxxxx";
+var singlePost = "FFFFFFFFFFFFFFFFFFFFFFFF"; // Default value to prevent 500 error
 app.post('/singlePost',function(req,res) {
 	console.log("This is the SINGLEPOST req body - /singlePost.post() - server.js - Data: " + req.body);
 	singlePost = req.body;

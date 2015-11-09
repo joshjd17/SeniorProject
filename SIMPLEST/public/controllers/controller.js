@@ -50,18 +50,6 @@ myApp.controller('appController',['$scope','$http',
 
 		recentFeed();
 
-		/*
-		// For displaying the posts in browsing.html partial
-		$scope.classPosts  = function () {
-			$http.get('/postlistClass').success(function (response) {
-				console.log("I got the data requested NEW");
-				$scope.classlist = response;
-				$scope.post = "";
-			});
-		};
-		//classPosts();
-		*/
-
 //defines function for the add button
 //calls $http.post, to create a post request to /productlist
 //sending $scope.products as the body of the req
@@ -115,13 +103,20 @@ myApp.controller('appController',['$scope','$http',
 		*/
 
 
-		// Toggle Sell and Trade options
-		$scope.postType = '';
-
 		// Redirect to browsing.html from browse.html
 		$scope.redirectBrowsing = function () {
 			window.location.replace("#/browsing");
 		};
+
+		// For displaying the posts in browsing.html partial
+		var classPosts  = function () {
+			$http.get('/postlistClass').success(function (response) {
+				console.log("I got the data requested - classPosts.get() - browseController - controller.js");
+				$scope.classlist = response;
+				$scope.post = "";
+			});
+		};
+		classPosts();
 
 		// For displaying the posts in browsing.html partial
 		var singlePost  = function () {
@@ -143,10 +138,11 @@ myApp.controller('appController',['$scope','$http',
 		}
 }]);
 
+/* Shouldn't be necessary anymore
 // Controller for browsing.html posts
 myApp.controller('browseController',['$scope','$http',
 	function($scope,$http) {
-		console.log("hello world from the controller");
+		console.log("Hello world from the BROWSE controller");
 
 		// For displaying the posts in browsing.html partial
 		var classPosts  = function () {
@@ -177,3 +173,4 @@ myApp.controller('browseController',['$scope','$http',
 			})
 		}
 }]);
+*/
