@@ -145,6 +145,10 @@ myApp.controller('appController',['$scope','$http',
 			})
 		}
 
+		$scope.emailAndRemove = function(postid) {
+			window.location.href = "mailto:address@dmail.com";
+		}
+
 
 }]);
 
