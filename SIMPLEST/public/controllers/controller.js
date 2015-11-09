@@ -136,6 +136,16 @@ myApp.controller('appController',['$scope','$http',
 				window.location.replace("#/viewpost");
 			})
 		}
+
+		$scope.emailAndRemove = function(postid) {
+			console.log("REMOVING " + postid);
+			$http.post('/emailAndRemove', [postid]).success(function(response){
+				console.log(response + "emailAndRemove.post() - controller.js");
+				window.location.replace("#/main");
+			})
+		}
+
+
 }]);
 
 /* Shouldn't be necessary anymore

@@ -35,17 +35,6 @@ app.get('/singlePost', function(req, res) {
 		res.json(docs);
 	});
 });
-/*
-// For deleting a single post in the Viewpost partial
-app.remove('/singlePost', function(req, res) {
-	console.log("I received a SINGLE POST REMOVE request");
-	console.log("The Single Post" + singlePost);
-	db.postlist.remove({_id: ObjectID(singlePost.toString())}, function (err, docs) {
-		console.log(docs);
-		res.json(docs);
-	});
-});
-*/
 
 // For inserting a new post into the database
 app.post('/postlist', function (req, res) {
@@ -104,7 +93,16 @@ app.post('/singlePost',function(req,res) {
 
 });
 
+// For removing a post by the specified id
+app.post('/emailAndRemove', function(req, res) {
+	console.log("I received a DELETE request - /emailAndRemove.post() - server.js " + req.body.toString());
+	db.postlist.remove({_id: ObjectID(req.body.toString())}, function (err, docs) {
+		console.log(docs);
+		res.json(docs);
+	});
+});
+
 app.listen(8000);
 console.log("Server listening on port 8000");
 
-module.exports = app;
+//module.exports = app;
