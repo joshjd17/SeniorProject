@@ -1,0 +1,30 @@
+{
+  "name": "bookbodega",
+  "version": "1.0.0",
+  "description": "A marketplace for textbooks created by students, for students.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongojs": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshjd17/SeniorProject.git"
+  },
+  "keywords": [
+    "textbook",
+    "marketplace"
+  ],
+  "author": "Justin Lok, Craig Fee, Joshua Dickinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshjd17/SeniorProject/issues"
+  },
+  "homepage": "https://github.com/joshjd17/SeniorProject#readme"
+}
