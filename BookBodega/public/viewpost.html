@@ -153,13 +153,34 @@
         <tbody>
 
         <tr ng-repeat ="post in singlepostview">
-            <!--<td><a ng-href = "mailto:{{post.contact.email}}">Email Seller</a></td>-->
+            <td><a ng-href = "mailto:{{post.contact.email}}?subject=Testing Book Bodega
+            &body=Hello, my name is {{user.contact.name}} and I am interested in your book:
+            %0D%0ABook Title: {{post.book.title}}
+            %0D%0ABook Author: {{post.book.author}}
+            %0D%0AYou can contact me at {{user.contact.email}}, thank you.
+            %0D%0AFrom Book Bodega">Email Seller</a></td>
             <!--<td><button class="btn btn-default" ng-click="emailAndRemove(post._id)">Contact Seller</button></td>-->
-            <td><button class="btn btn-default" ng-click="emailAndRemoveTest(post._id)">Contact Seller</button></td>
+            <!--<td><button class="btn btn-default" ng-click="emailAndRemoveTest(post._id)">Contact Seller</button></td>-->
         </tr>
 
         </tbody>
     </table>
+<!-- Proof of Concept -->
+    <!-- Contact Information -->
+    <!-- Contact Name -->
+    <div class="form-group">
+        <label class="control-label" for="name">Your Contact Name:</label>
+        <div class="controls">
+            <input type="text" data-ng-model="user.contact.name" id="name" class="form-control" placeholder="Your Name (Ex: John Doe)" required>
+        </div>
+    </div>
+    <!-- Contact E-Mail -->
+    <div class="form-group">
+        <label class="control-label" for="email">Your Contact E-Mail:</label>
+        <div class="controls">
+            <input type="email" data-ng-model="user.contact.email" id="email" class="form-control" placeholder="Your E-Mail (Ex: john.doe@domain.com)" required>
+        </div>
+    </div>
 </div>
 
 <!-- Design Notes -->
