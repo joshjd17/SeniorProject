@@ -58,7 +58,7 @@ app.get('/deptlist',function(req,res) {
 });
 
 // For setting the department selected into deptSelect
-var deptSelect = '';
+var deptSelect;
 app.post('/deptlist', function(req,res){
 	console.log("This is the req body - /deptlist.post() - server.js - Data: " + req.body);
 	deptSelect = req.body;
@@ -76,7 +76,7 @@ app.get('/classlist',function(req,res) {
 });
 
 // For setting the class selected into classSelect
-var classSelect = '';
+var classSelect;
 app.post('/classlist',function(req,res) {
 	console.log("This is the class req body - /classlist.post() - server.js - Data: " + req.body);
 	classSelect = req.body;
@@ -85,7 +85,7 @@ app.post('/classlist',function(req,res) {
 });
 
 // For getting the post for the specific id
-var singlePost = "FFFFFFFFFFFFFFFFFFFFFFFF"; // Default value to prevent 500 error
+var singlePost;
 app.post('/singlePost',function(req,res) {
 	console.log("This is the SINGLEPOST req body - /singlePost.post() - server.js - Data: " + req.body);
 	singlePost = req.body;
