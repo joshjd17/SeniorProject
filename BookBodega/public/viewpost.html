@@ -3,7 +3,6 @@
    
     <!-- Will be in a more presentable format -->
 
-
    <table st-table ="postlist" class="table table-striped">
         <thread>
             <tr>
@@ -18,7 +17,6 @@
         </tbody>
         <thread>
             <tr>
-
                 <th>Class</th>
             </tr>
         </thread>
@@ -147,41 +145,54 @@
         </tbody>
         <thread>
             <tr>
-                <th>Contact</th>
+                <th><font size="5">Contact</font></th>
             </tr>
         </thread>
-       
-    </table>
+
 <!-- Proof of Concept -->
     <!-- Contact Information -->
     <!-- Contact Name -->
-    <div class="form-group">
+    <tr>
+    <td>
+        <div class="form-group">
         <label class="control-label" for="name">Your Contact Name:</label>
         <div class="controls">
             <input type="text" data-ng-model="user.contact.name" id="name" class="form-control" placeholder="Your Name (Ex: John Doe)" required>
         </div>
     </div>
+    </td>
+    </tr>
     <!-- Contact E-Mail -->
+    <tr>
+    <td>
     <div class="form-group">
         <label class="control-label" for="email">Your Contact E-Mail:</label>
         <div class="controls">
             <input type="email" data-ng-model="user.contact.email" id="email" class="form-control" placeholder="Your E-Mail (Ex: john.doe@domain.com)" required>
         </div>
     </div>
+    </td>
+    </tr>
      <tbody>
-
-        <tr ng-repeat ="post in singlepostview">
-            <td><a ng-href = "mailto:{{post.contact.email}}?subject=Testing Book Bodega
-            &body=Hello, my name is {{user.contact.name}} and I am interested in your book:
-            %0D%0ABook Title: {{post.book.title}}
-            %0D%0ABook Author: {{post.book.author}}
-            %0D%0AYou can contact me at {{user.contact.email}}, thank you.
-            %0D%0AFrom Book Bodega"><font size="5">EMAIL SELLER</font></a></td>
-            <!--<td><button class="btn btn-default" ng-click="emailAndRemove(post._id)">Contact Seller</button></td>-->
-            <!--<td><button class="btn btn-default" ng-click="emailAndRemoveTest(post._id)">Contact Seller</button></td>-->
-        </tr>
-
+     <tr ng-repeat="post in singlepostview">
+         <td><button class="btn btn-default" ng-click="email(post.contact.name, post.contact.email, user.contact.name, user.contact.email, post.book.title, post.book.author, post.sell.price, post.trade.title, post.trade.author, post.postType); emailAndRemove(post._id)">E-MAIL SELLER</button></td>
+         <!--<td><button class="btn btn-default" ng-click="emailAndRemove(post._id)">Contact Seller</button></td>
+         <!--<td><button class="btn btn-default" ng-click="emailAndRemoveTest(post._id)">Contact Seller</button></td> -->
+     </tr>
+  <!--
+     <tr ng-repeat ="post in singlepostview">
+         <td><a ng-href = "mailto:{{post.contact.email}}?subject=Testing Book Bodega
+         &body=Hello, my name is {{user.contact.name}} and I am interested in your book:
+         %0D%0ABook Title: {{post.book.title}}
+         %0D%0ABook Author: {{post.book.author}}
+         %0D%0AYou can contact me at {{user.contact.email}}, thank you.
+         %0D%0AFrom Book Bodega"><font size="5">EMAIL SELLER</font></a></td>
+         <!--<td><button class="btn btn-default" ng-click="emailAndRemove(post._id)">Contact Seller</button></td>
+         <!--<td><button class="btn btn-default" ng-click="emailAndRemoveTest(post._id)">Contact Seller</button></td>
+     </tr>
+-->
         </tbody>
+   </table>
 </div>
 
 <!-- Design Notes -->

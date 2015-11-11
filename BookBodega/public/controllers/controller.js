@@ -137,7 +137,6 @@ myApp.controller('appController',['$scope','$http',
 			})
 		}
 
-		/*
 		$scope.emailAndRemove = function(postid) {
 			console.log("REMOVING " + postid);
 			$http.post('/emailAndRemove', [postid]).success(function(response){
@@ -145,10 +144,34 @@ myApp.controller('appController',['$scope','$http',
 				window.location.replace("#/main");
 			})
 		}
-		*/
+
+		$scope.email = function(sellerName,sellerEmail,userName,userEmail,bookTitle,bookAuthor,bookPrice,tradeTitle,tradeAuthor,postType) {
+			console.log("THE POST" + sellerName + sellerEmail + userName + userEmail + bookTitle + bookAuthor + bookPrice + tradeTitle + tradeAuthor + postType);
+			if (postType == 'Sell') {
+				window.open("mailto:" + sellerEmail + "?subject=A Message from Book Bodega!"+"&body=Hello "+ sellerName + ",%0D%0A %0D%0A" + "I, " + userName +
+					", am interested in buying your textbook " + bookTitle + " by " + bookAuthor + " that you are selling for $" + bookPrice + ".%0D%0A" +
+					"You can contact me at " + userEmail + "%0D%0A %0D%0A" + "I look forward to hearing from you!");
+			}
+			else if (postType == 'Trade') {
+				window.open("mailto:" + sellerEmail + "?subject=A Message from Book Bodega!"+"&body=Hello "+ sellerName + ",%0D%0A %0D%0A" + "I, " + userName +
+					", am interested in trading my textbook " + tradeTitle + " by " + tradeAuthor + " for your textbook " + bookTitle + " by " + bookAuthor +
+					".%0D%0A" + "You can contact me at " + userEmail + "%0D%0A %0D%0A" + "I look forward to hearing from you!");
+			}
+		}
+
 		/*
-		$scope.emailAndRemove = function(sellername,postbook,username,useremail) {
-			window.location.href = "mailto:address@dmail.com";
+		$scope.emailSell = function(sellerName,sellerEmail,userName,userEmail,bookTitle,bookAuthor,bookPrice) {
+			console.log("THE POST" + sellerName + sellerEmail + userName + userEmail + bookTitle + bookAuthor + bookPrice);
+			window.open("mailto:" + sellerEmail + "?subject=A Message from Book Bodega!"+"&body=Hello "+ sellerName + ",%0D%0A %0D%0A" + "I, " + userName +
+				", am interested in buying your textbook " + bookTitle + " by " + bookAuthor + " that you are selling for $" + bookPrice + ".%0D%0A" +
+				"You can contact me at " + userEmail + "%0D%0A %0D%0A" + "I look forward to hearing from you!");
+		}
+
+		$scope.emailTrade = function(sellerName,sellerEmail,userName,userEmail,bookTitle,bookAuthor,tradeTitle,tradeAuthor) {
+			console.log("THE POST" + sellerName + sellerEmail + userName + userEmail + bookTitle + bookAuthor + tradeTitle + tradeAuthor);
+			window.open("mailto:" + sellerEmail + "?subject=A Message from Book Bodega!"+"&body=Hello "+ sellerName + ",%0D%0A %0D%0A" + "I, " + userName +
+				", am interested in trading my textbook " + tradeTitle + " by " + tradeAuthor + " for your textbook " + bookTitle + " by " + bookAuthor +
+				".%0D%0A" + "You can contact me at " + userEmail + "%0D%0A %0D%0A" + "I look forward to hearing from you!");
 		}
 		*/
 
