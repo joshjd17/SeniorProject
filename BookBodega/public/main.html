@@ -9,14 +9,14 @@
     </form>
 </div>
 
-<div class= "container">
+<div>
 <table st-table ="postlist" class="table table-striped">
     <thread>
         <tr>
             <th>Department</th>
             <th>Class</th>
             <th>Book Title</th>
-            <th>Book Author</th>
+            
             <th>Post Type</th>
             <th>View</th>
         </tr>
@@ -28,7 +28,7 @@
         <td>{{post.department | uppercase}}</td>
         <td>{{post.class}}</td>
         <td>{{post.book.title}}</td>
-        <td>{{post.book.author}}</td>
+    
         
         <td>{{post.postType | uppercase}}</td>
 
