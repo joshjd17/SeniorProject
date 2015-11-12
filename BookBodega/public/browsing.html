@@ -1,5 +1,5 @@
 <!--browsing.html-->
-<div ng-controller="appController">
+<div class = "container" ng-controller="appController">
     <h1 align="center">BROWSING</h1>
     <div align= "center">
     <form class="navbar-form navbar-center" role="search">
@@ -15,9 +15,6 @@
                 <th>Department</th>
                 <th>Class</th>
                 <th>Book Title</th>
-                <th>Book Author</th>
-                <th>Book ISBN</th>
-                <th>Post Type</th>
                 <th>View</th>
             </tr>
         </thread>
@@ -27,9 +24,6 @@
             <td>{{post.department | uppercase}}</td>
             <td>{{post.class}}</td>
             <td>{{post.book.title}}</td>
-            <td>{{post.book.author}}</td>
-            <td>{{post.book.isbn}}</td>
-            <td>{{post.postType | uppercase}}</td>
             <td><button class="btn btn-default" ng-click="getSinglePost(post._id)">View</button></td>
         </tr>
 
