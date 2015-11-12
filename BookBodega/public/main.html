@@ -1,5 +1,5 @@
 <!--main.html-->
-<div  class="container" ng-controller="appController">
+<div  ng-controller="appController">
 <h1 align="center">RECENT FEED</h1>
 <div align= "center">
     <form class="navbar-form navbar-center" role="search">
@@ -17,7 +17,7 @@
             <th>Class</th>
             <th>Book Title</th>
             
-            <th>Post Type</th>
+            
             <th>View</th>
         </tr>
     </thread>
@@ -29,8 +29,6 @@
         <td>{{post.class}}</td>
         <td>{{post.book.title}}</td>
     
-        
-        <td>{{post.postType | uppercase}}</td>
 
         <td><button class="btn btn-default" ng-click="getSinglePost(post._id)">View</button></td>
 
