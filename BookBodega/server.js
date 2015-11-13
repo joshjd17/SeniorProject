@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
 var ObjectID = require('mongojs').ObjectId;
-//var db = mongojs('mongodb://ds042138.mongolab.com:42138/testbodega',['postlist']);
 var db = mongojs('bbApp',['postlist']);
 var bodyParser = require('body-parser');
 
@@ -103,6 +102,7 @@ app.post('/emailAndRemove', function(req, res) {
 });
 
 app.listen(80);
+//app.listen(8000)
 console.log("Server listening on port 8000");
 
 //module.exports = app;
