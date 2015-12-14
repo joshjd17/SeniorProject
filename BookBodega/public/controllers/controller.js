@@ -64,7 +64,6 @@ myApp.controller('appController',['$scope','$http',
 		};
 
 		var deptList = function () {
-
 			$http.get('/deptlist').success(function (response) {
 				console.log("I got the dept data - deptList.get() - controller.js");
 				$scope.deptlist = response;
@@ -157,6 +156,10 @@ myApp.controller('appController',['$scope','$http',
 					", am interested in trading my textbook " + tradeTitle + " by " + tradeAuthor + " for your textbook " + bookTitle + " by " + bookAuthor +
 					".%0D%0A" + "You can contact me at " + userEmail + "%0D%0A %0D%0A" + "I look forward to hearing from you!");
 			}
+		}
+
+		$scope.contact = function() {
+			window.open("mailto:bookbodega@outlook.com?subject=Book Bodega");
 		}
 
 		/*

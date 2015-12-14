@@ -67,7 +67,7 @@ app.post('/deptlist', function(req,res){
 // For getting the classes within the department
 app.get('/classlist',function(req,res) {
 	console.log("I received a class GET request - /classlist.get() - server.js - deptSelect = " + deptSelect);
-	//console.log("deptSelect = "+deptSelect);
+	console.log("deptSelect = "+deptSelect);
 	db.postlist.distinct('class', {department : deptSelect.toString()}, function(err, docs) {
 		console.log(docs);
 		res.json(docs);
@@ -80,7 +80,6 @@ app.post('/classlist',function(req,res) {
 	console.log("This is the class req body - /classlist.post() - server.js - Data: " + req.body);
 	classSelect = req.body;
 	res.send();
-
 });
 
 // For getting the post for the specific id
@@ -89,7 +88,6 @@ app.post('/singlePost',function(req,res) {
 	console.log("This is the SINGLEPOST req body - /singlePost.post() - server.js - Data: " + req.body);
 	singlePost = req.body;
 	res.send();
-
 });
 
 // For removing a post by the specified id
@@ -103,6 +101,6 @@ app.post('/emailAndRemove', function(req, res) {
 
 app.listen(80);
 //app.listen(8000)
-console.log("Server listening on port 8000");
+console.log("Server listening on port 80");
 
 //module.exports = app;
