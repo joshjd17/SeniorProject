@@ -99,8 +99,8 @@ app.post('/emailAndRemove', function(req, res) {
 	});
 });
 
-//app.listen(80);
-app.listen(8000)
-console.log("Server listening on port 8000");
+app.listen(80);
+//app.listen(8000)
+console.log("Server listening on port 80");
 
 //module.exports = app;
